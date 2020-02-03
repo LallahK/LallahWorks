@@ -1,0 +1,466 @@
+// Input 1: 0x00332031
+
+
+0804bd59 <phase_5>:
+ 804bd59:	55                   	push   ebp
+ 804bd5a:	89 e5                	mov    ebp,esp
+ 804bd5c:	83 ec 28             	sub    esp,0x28
+ 804bd5f:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+ 804bd62:	89 45 e4             	mov    DWORD PTR [ebp-0x1c],eax
+ 804bd65:	65 a1 14 00 00 00    	mov    eax,gs:0x14
+ 804bd6b:	89 45 f4             	mov    DWORD PTR [ebp-0xc],eax
+ 804bd6e:	31 c0                	xor    eax,eax
+ 804bd70:	e8 f0 ed ff ff       	call   804ab65 <read_line>
+ 804bd75:	89 45 f0             	mov    DWORD PTR [ebp-0x10],eax		//Input
+ 804bd78:	83 7d f0 00          	cmp    DWORD PTR [ebp-0x10],0x0
+ 804bd7c:	75 12                	jne    804bd90 <phase_5+0x37>
+ 804bd7e:	83 ec 08             	sub    esp,0x8
+ 804bd81:	68 a6 e8 08 08       	push   0x808e8a6
+ 804bd86:	6a 05                	push   0x5
+ 804bd88:	e8 fd ec ff ff       	call   804aa8a <explode_bomb>
+ 804bd8d:	83 c4 10             	add    esp,0x10
+
+ 804bd90:	83 ec 04             	sub    esp,0x4
+ 804bd93:	8d 45 ec             	lea    eax,[ebp-0x14]
+ 804bd96:	50                   	push   eax
+ 804bd97:	68 b4 e8 08 08       	push   0x808e8b4
+ 804bd9c:	ff 75 f0             	push   DWORD PTR [ebp-0x10]
+ 804bd9f:	e8 3c dc ff ff       	call   80499e0 <sscanf@plt>	//Checks for int
+ 804bda4:	83 c4 10             	add    esp,0x10
+ 804bda7:	85 c0                	test   eax,eax
+ 804bda9:	75 10                	jne    804bdbb <phase_5+0x62>
+ 804bdab:	83 ec 08             	sub    esp,0x8
+ 804bdae:	ff 75 f0             	push   DWORD PTR [ebp-0x10]
+ 804bdb1:	6a 05                	push   0x5
+ 804bdb3:	e8 d2 ec ff ff       	call   804aa8a <explode_bomb>
+ 804bdb8:	83 c4 10             	add    esp,0x10
+ 804bdbb:	8b 45 ec             	mov    eax,DWORD PTR [ebp-0x14]
+ 804bdbe:	83 ec 08             	sub    esp,0x8
+ 804bdc1:	ff 75 e4             	push   DWORD PTR [ebp-0x1c]
+ 804bdc4:	50                   	push   eax
+ 804bdc5:	e8 36 00 00 00       	call   804be00 <function10>
+ 804bdca:	83 c4 10             	add    esp,0x10
+ 804bdcd:	85 c0                	test   eax,eax
+ 804bdcf:	75 10                	jne    804bde1 <phase_5+0x88>
+ 804bdd1:	83 ec 08             	sub    esp,0x8
+ 804bdd4:	ff 75 f0             	push   DWORD PTR [ebp-0x10]
+ 804bdd7:	6a 05                	push   0x5
+ 804bdd9:	e8 ac ec ff ff       	call   804aa8a <explode_bomb>
+ 804bdde:	83 c4 10             	add    esp,0x10
+ 804bde1:	8b 45 f0             	mov    eax,DWORD PTR [ebp-0x10]
+ 804bde4:	8b 55 f4             	mov    edx,DWORD PTR [ebp-0xc]
+ 804bde7:	65 33 15 14 00 00 00 	xor    edx,DWORD PTR gs:0x14
+ 804bdee:	74 05                	je     804bdf5 <phase_5+0x9c>
+ 804bdf0:	e8 5b d8 ff ff       	call   8049650 <__stack_chk_fail@plt>
+ 804bdf5:	c9                   	leave  
+ 804bdf6:	c3                   	ret    
+ 804bdf7:	66 90                	xchg   ax,ax
+ 804bdf9:	66 90                	xchg   ax,ax
+ 804bdfb:	66 90                	xchg   ax,ax
+ 804bdfd:	66 90                	xchg   ax,ax
+ 804bdff:	90                   	nop
+
+0804be00 <function10>:
+ 804be00:	55                   	push   ebp
+ 804be01:	89 e5                	mov    ebp,esp
+ 804be03:	e9 91 03 00 00       	jmp    804c199 <function10+0x399>
+ 804be08:	e9 08 05 00 00       	jmp    804c315 <function10+0x515>
+ 804be0d:	e9 db 03 00 00       	jmp    804c1ed <function10+0x3ed>
+ 804be12:	e9 41 02 00 00       	jmp    804c058 <function10+0x258>
+ 804be17:	e9 a5 02 00 00       	jmp    804c0c1 <function10+0x2c1>
+ 804be1c:	e9 e7 03 00 00       	jmp    804c208 <function10+0x408>
+ 804be21:	e9 0a 01 00 00       	jmp    804bf30 <function10+0x130>
+ 804be26:	e9 a8 00 00 00       	jmp    804bed3 <function10+0xd3>
+ 804be2b:	e9 9a 05 00 00       	jmp    804c3ca <function10+0x5ca>
+ 804be30:	e9 e1 03 00 00       	jmp    804c216 <function10+0x416>
+ 804be35:	e9 de 00 00 00       	jmp    804bf18 <function10+0x118>
+ 804be3a:	eb 05                	jmp    804be41 <function10+0x41>
+ 804be3c:	e9 7b 04 00 00       	jmp    804c2bc <function10+0x4bc>
+ 804be41:	e9 37 01 00 00       	jmp    804bf7d <function10+0x17d>
+ 804be46:	e9 11 04 00 00       	jmp    804c25c <function10+0x45c>
+ 804be4b:	e9 af 00 00 00       	jmp    804beff <function10+0xff>
+ 804be50:	e9 82 02 00 00       	jmp    804c0d7 <function10+0x2d7>
+ 804be55:	e9 8e 02 00 00       	jmp    804c0e8 <function10+0x2e8>
+ 804be5a:	e9 80 05 00 00       	jmp    804c3df <function10+0x5df>
+ 804be5f:	e9 7b 01 00 00       	jmp    804bfdf <function10+0x1df>
+ 804be64:	e9 7f 02 00 00       	jmp    804c0e8 <function10+0x2e8>
+ 804be69:	eb 29                	jmp    804be94 <function10+0x94>
+ 804be6b:	e9 60 04 00 00       	jmp    804c2d0 <function10+0x4d0>
+ 804be70:	eb 61                	jmp    804bed3 <function10+0xd3>
+ 804be72:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]		/	.3
+ 804be75:	eb 37                	jmp    804beae <function10+0xae>
+ 804be77:	e9 7c 04 00 00       	jmp    804c2f8 <function10+0x4f8>
+ 804be7c:	e9 d9 01 00 00       	jmp    804c05a <function10+0x25a>
+ 804be81:	e9 39 01 00 00       	jmp    804bfbf <function10+0x1bf>
+ 804be86:	eb 05                	jmp    804be8d <function10+0x8d>
+ 804be88:	e9 fd 02 00 00       	jmp    804c18a <function10+0x38a>
+ 804be8d:	e9 37 01 00 00       	jmp    804bfc9 <function10+0x1c9>
+ 804be92:	eb 9c                	jmp    804be30 <function10+0x30>
+ 804be94:	83 f8 01             	cmp    eax,0x1						/	.5
+ 804be97:	e9 c7 03 00 00       	jmp    804c263 <function10+0x463>
+ 804be9c:	e9 ba 00 00 00       	jmp    804bf5b <function10+0x15b>
+ 804bea1:	e9 d6 04 00 00       	jmp    804c37c <function10+0x57c>
+ 804bea6:	0f 84 13 01 00 00    	je     804bfbf <function10+0x1bf>
+ 804beac:	eb 8c                	jmp    804be3a <function10+0x3a>
+ 804beae:	e9 80 01 00 00       	jmp    804c033 <function10+0x233>
+ 804beb3:	e9 1a 05 00 00       	jmp    804c3d2 <function10+0x5d2>
+ 804beb8:	e9 89 04 00 00       	jmp    804c346 <function10+0x546>
+ 804bebd:	e9 54 03 00 00       	jmp    804c216 <function10+0x416>
+ 804bec2:	e9 0b 05 00 00       	jmp    804c3d2 <function10+0x5d2>
+ 804bec7:	eb 36                	jmp    804beff <function10+0xff>
+ 804bec9:	e9 b9 02 00 00       	jmp    804c187 <function10+0x387>
+ 804bece:	e9 26 02 00 00       	jmp    804c0f9 <function10+0x2f9>
+ 804bed3:	e9 ce 01 00 00       	jmp    804c0a6 <function10+0x2a6>
+ 804bed8:	e9 4c 02 00 00       	jmp    804c129 <function10+0x329>
+ 804bedd:	7e bd                	jle    804be9c <function10+0x9c>	/	.6
+ 804bedf:	e9 0d 04 00 00       	jmp    804c2f1 <function10+0x4f1>
+ 804bee4:	e9 af 03 00 00       	jmp    804c298 <function10+0x498>
+ 804bee9:	e9 8c 01 00 00       	jmp    804c07a <function10+0x27a>
+ 804beee:	eb 4a                	jmp    804bf3a <function10+0x13a>
+ 804bef0:	e9 d0 02 00 00       	jmp    804c1c5 <function10+0x3c5>
+ 804bef5:	e9 39 02 00 00       	jmp    804c133 <function10+0x333>
+ 804befa:	e9 b2 02 00 00       	jmp    804c1b1 <function10+0x3b1>
+ 804beff:	e9 46 03 00 00       	jmp    804c24a <function10+0x44a>
+ 804bf04:	e9 d1 04 00 00       	jmp    804c3da <function10+0x5da>
+ 804bf09:	e9 c7 01 00 00       	jmp    804c0d5 <function10+0x2d5>
+ 804bf0e:	e9 e8 04 00 00       	jmp    804c3fb <function10+0x5fb>
+ 804bf13:	e9 27 04 00 00       	jmp    804c33f <function10+0x53f>
+ 804bf18:	eb 1b                	jmp    804bf35 <function10+0x135>
+ 804bf1a:	e9 ec 03 00 00       	jmp    804c30b <function10+0x50b>
+ 804bf1f:	bb 01 00 00 00       	mov    ebx,0x1
+ 804bf24:	e9 d8 00 00 00       	jmp    804c001 <function10+0x201>
+ 804bf29:	eb 75                	jmp    804bfa0 <function10+0x1a0>
+ 804bf2b:	e9 7e 03 00 00       	jmp    804c2ae <function10+0x4ae>
+ 804bf30:	e9 1b 04 00 00       	jmp    804c350 <function10+0x550>
+ 804bf35:	e9 21 04 00 00       	jmp    804c35b <function10+0x55b>
+ 804bf3a:	e9 33 ff ff ff       	jmp    804be72 <function10+0x72>
+ 804bf3f:	e9 e2 fe ff ff       	jmp    804be26 <function10+0x26>
+ 804bf44:	e9 91 04 00 00       	jmp    804c3da <function10+0x5da>
+ 804bf49:	0f 8c 4b 03 00 00    	jl     804c29a <function10+0x49a>	/  .61.2
+ 804bf4f:	e9 5c 01 00 00       	jmp    804c0b0 <function10+0x2b0>
+ 804bf54:	e9 63 03 00 00       	jmp    804c2bc <function10+0x4bc>
+ 804bf59:	eb 07                	jmp    804bf62 <function10+0x162>
+ 804bf5b:	31 c0                	xor    eax,eax						/  .60.1
+ 804bf5d:	e9 e2 00 00 00       	jmp    804c044 <function10+0x244>
+ 804bf62:	e9 4f 02 00 00       	jmp    804c1b6 <function10+0x3b6>
+ 804bf67:	e9 24 01 00 00       	jmp    804c090 <function10+0x290>
+ 804bf6c:	e9 ae 00 00 00       	jmp    804c01f <function10+0x21f>
+ 804bf71:	e9 90 01 00 00       	jmp    804c106 <function10+0x306>
+ 804bf76:	eb b8                	jmp    804bf30 <function10+0x130>
+ 804bf78:	e9 67 ff ff ff       	jmp    804bee4 <function10+0xe4>
+ 804bf7d:	e9 21 02 00 00       	jmp    804c1a3 <function10+0x3a3>
+ 804bf82:	e9 27 03 00 00       	jmp    804c2ae <function10+0x4ae>
+ 804bf87:	e9 0b 04 00 00       	jmp    804c397 <function10+0x597>
+ 804bf8c:	e9 f5 03 00 00       	jmp    804c386 <function10+0x586>
+ 804bf91:	e9 0f 04 00 00       	jmp    804c3a5 <function10+0x5a5>
+ 804bf96:	e9 16 02 00 00       	jmp    804c1b1 <function10+0x3b1>
+ 804bf9b:	e9 29 ff ff ff       	jmp    804bec9 <function10+0xc9>
+ 804bfa0:	e9 f2 03 00 00       	jmp    804c397 <function10+0x597>
+ 804bfa5:	e9 c2 03 00 00       	jmp    804c36c <function10+0x56c>
+ 804bfaa:	0f 8e c0 00 00 00    	jle    804c070 <function10+0x270>  /.61.20.2
+ 804bfb0:	e9 5b 01 00 00       	jmp    804c110 <function10+0x310>
+ 804bfb5:	e9 6a 01 00 00       	jmp    804c124 <function10+0x324>
+ 804bfba:	e9 34 04 00 00       	jmp    804c3f3 <function10+0x5f3>
+ 804bfbf:	e9 fd 00 00 00       	jmp    804c0c1 <function10+0x2c1>
+ 804bfc4:	e9 4c 03 00 00       	jmp    804c315 <function10+0x515>
+ 804bfc9:	e9 72 02 00 00       	jmp    804c240 <function10+0x440>
+ 804bfce:	eb 7e                	jmp    804c04e <function10+0x24e>
+ 804bfd0:	e9 20 ff ff ff       	jmp    804bef5 <function10+0xf5>
+ 804bfd5:	e9 60 ff ff ff       	jmp    804bf3a <function10+0x13a>
+ 804bfda:	e9 aa 00 00 00       	jmp    804c089 <function10+0x289>
+ 804bfdf:	e9 14 03 00 00       	jmp    804c2f8 <function10+0x4f8>
+ 804bfe4:	e9 04 02 00 00       	jmp    804c1ed <function10+0x3ed>
+ 804bfe9:	eb b5                	jmp    804bfa0 <function10+0x1a0>
+ 804bfeb:	e9 4f 03 00 00       	jmp    804c33f <function10+0x53f>
+ 804bff0:	eb 41                	jmp    804c033 <function10+0x233>
+ 804bff2:	e9 cf 02 00 00       	jmp    804c2c6 <function10+0x4c6>
+ 804bff7:	e9 a5 00 00 00       	jmp    804c0a1 <function10+0x2a1>
+ 804bffc:	e9 a9 01 00 00       	jmp    804c1aa <function10+0x3aa>
+ 804c001:	e9 15 02 00 00       	jmp    804c21b <function10+0x41b>
+ 804c006:	e9 4b 01 00 00       	jmp    804c156 <function10+0x356>
+ 804c00b:	e9 ca 03 00 00       	jmp    804c3da <function10+0x5da>
+ 804c010:	e9 a1 03 00 00       	jmp    804c3b6 <function10+0x5b6>
+ 804c015:	e9 a2 02 00 00       	jmp    804c2bc <function10+0x4bc>
+ 804c01a:	e9 b1 02 00 00       	jmp    804c2d0 <function10+0x4d0>
+ 804c01f:	e9 75 03 00 00       	jmp    804c399 <function10+0x599>
+ 804c024:	e9 7b 02 00 00       	jmp    804c2a4 <function10+0x4a4>
+ 804c029:	e9 1e 01 00 00       	jmp    804c14c <function10+0x34c>
+ 804c02e:	e9 6b 03 00 00       	jmp    804c39e <function10+0x59e>
+ 804c033:	e9 9d 00 00 00       	jmp    804c0d5 <function10+0x2d5>
+ 804c038:	e9 40 01 00 00       	jmp    804c17d <function10+0x37d>
+ 804c03d:	eb 0f                	jmp    804c04e <function10+0x24e>
+ 804c03f:	e9 17 ff ff ff       	jmp    804bf5b <function10+0x15b>
+ 804c044:	e9 0d 01 00 00       	jmp    804c156 <function10+0x356>
+ 804c049:	e9 e5 00 00 00       	jmp    804c133 <function10+0x333>
+ 804c04e:	e9 1a 02 00 00       	jmp    804c26d <function10+0x46d>
+ 804c053:	e9 1f fe ff ff       	jmp    804be77 <function10+0x77>
+ 804c058:	eb 16                	jmp    804c070 <function10+0x270>
+ 804c05a:	eb 05                	jmp    804c061 <function10+0x261>
+ 804c05c:	e9 cf 02 00 00       	jmp    804c330 <function10+0x530>
+ 804c061:	e9 04 01 00 00       	jmp    804c16a <function10+0x36a>
+ 804c066:	e9 1e 02 00 00       	jmp    804c289 <function10+0x489>
+ 804c06b:	e9 2c fe ff ff       	jmp    804be9c <function10+0x9c>
+ 804c070:	e9 15 01 00 00       	jmp    804c18a <function10+0x38a>
+ 804c075:	e9 4c 02 00 00       	jmp    804c2c6 <function10+0x4c6>
+ 804c07a:	e9 1a 03 00 00       	jmp    804c399 <function10+0x599>
+ 804c07f:	e9 df 02 00 00       	jmp    804c363 <function10+0x563>
+ 804c084:	e9 a3 01 00 00       	jmp    804c22c <function10+0x42c>
+ 804c089:	eb e0                	jmp    804c06b <function10+0x26b>
+ 804c08b:	e9 25 ff ff ff       	jmp    804bfb5 <function10+0x1b5>
+ 804c090:	e9 9b fe ff ff       	jmp    804bf30 <function10+0x130>
+ 804c095:	e9 64 01 00 00       	jmp    804c1fe <function10+0x3fe>
+ 804c09a:	eb 3b                	jmp    804c0d7 <function10+0x2d7>
+ 804c09c:	e9 4d fe ff ff       	jmp    804beee <function10+0xee>
+ 804c0a1:	e9 00 fe ff ff       	jmp    804bea6 <function10+0xa6>
+ 804c0a6:	e9 ef 01 00 00       	jmp    804c29a <function10+0x49a>
+ 804c0ab:	e9 bf 00 00 00       	jmp    804c16f <function10+0x36f>
+ 804c0b0:	eb d7                	jmp    804c089 <function10+0x289>
+ 804c0b2:	e9 7e fe ff ff       	jmp    804bf35 <function10+0x135>
+ 804c0b7:	e9 3c 02 00 00       	jmp    804c2f8 <function10+0x4f8>
+ 804c0bc:	e9 26 02 00 00       	jmp    804c2e7 <function10+0x4e7>
+ 804c0c1:	b8 01 00 00 00       	mov    eax,0x1
+ 804c0c6:	e9 b7 fe ff ff       	jmp    804bf82 <function10+0x182>
+ 804c0cb:	e9 59 02 00 00       	jmp    804c329 <function10+0x529>
+ 804c0d0:	e9 54 02 00 00       	jmp    804c329 <function10+0x529>
+ 804c0d5:	eb 18                	jmp    804c0ef <function10+0x2ef>
+ 804c0d7:	e9 8d fd ff ff       	jmp    804be69 <function10+0x69>
+ 804c0dc:	e9 23 fe ff ff       	jmp    804bf04 <function10+0x104>
+ 804c0e1:	e9 cb 02 00 00       	jmp    804c3b1 <function10+0x5b1>
+ 804c0e6:	eb 3c                	jmp    804c124 <function10+0x324>
+ 804c0e8:	eb 3a                	jmp    804c124 <function10+0x324>
+ 804c0ea:	e9 eb 01 00 00       	jmp    804c2da <function10+0x4da>
+ 804c0ef:	b9 00 00 00 00       	mov    ecx,0x0						/	.4	
+ 804c0f4:	e9 f0 02 00 00       	jmp    804c3e9 <function10+0x5e9>
+ 804c0f9:	3b 4d 08             	cmp    ecx,DWORD PTR [ebp+0x8]
+ 804c0fc:	e9 e3 fe ff ff       	jmp    804bfe4 <function10+0x1e4>
+ 804c101:	8b 75 0c             	mov    esi,DWORD PTR [ebp+0xc]		/	.2
+ 804c104:	eb 14                	jmp    804c11a <function10+0x31a>
+ 804c106:	e9 4d ff ff ff       	jmp    804c058 <function10+0x258>
+ 804c10b:	e9 3b fd ff ff       	jmp    804be4b <function10+0x4b>
+ 804c110:	e9 3f fe ff ff       	jmp    804bf54 <function10+0x154>
+ 804c115:	e9 50 02 00 00       	jmp    804c36a <function10+0x56a>
+ 804c11a:	e9 7f 02 00 00       	jmp    804c39e <function10+0x59e>
+ 804c11f:	e9 2f ff ff ff       	jmp    804c053 <function10+0x253>
+ 804c124:	e9 81 fe ff ff       	jmp    804bfaa <function10+0x1aa>
+ 804c129:	e9 a0 fe ff ff       	jmp    804bfce <function10+0x1ce>
+ 804c12e:	e9 02 02 00 00       	jmp    804c335 <function10+0x535>
+ 804c133:	e9 8a fd ff ff       	jmp    804bec2 <function10+0xc2>
+ 804c138:	e9 74 02 00 00       	jmp    804c3b1 <function10+0x5b1>
+ 804c13d:	e9 34 fe ff ff       	jmp    804bf76 <function10+0x176>
+ 804c142:	e9 51 01 00 00       	jmp    804c298 <function10+0x498>
+ 804c147:	e9 2a 02 00 00       	jmp    804c376 <function10+0x576>
+ 804c14c:	e9 54 02 00 00       	jmp    804c3a5 <function10+0x5a5>
+ 804c151:	e9 8d 00 00 00       	jmp    804c1e3 <function10+0x3e3>
+ 804c156:	e9 f8 fe ff ff       	jmp    804c053 <function10+0x253>
+ 804c15b:	e9 ae fd ff ff       	jmp    804bf0e <function10+0x10e>
+ 804c160:	e9 32 02 00 00       	jmp    804c397 <function10+0x597>
+ 804c165:	e9 ff fc ff ff       	jmp    804be69 <function10+0x69>
+ 804c16a:	e9 2b 01 00 00       	jmp    804c29a <function10+0x49a>
+ 804c16f:	eb 95                	jmp    804c106 <function10+0x306>
+ 804c171:	e9 d8 fe ff ff       	jmp    804c04e <function10+0x24e>
+ 804c176:	01 d9                	add    ecx,ebx
+ 804c178:	e9 c2 fd ff ff       	jmp    804bf3f <function10+0x13f>
+ 804c17d:	e9 e7 fc ff ff       	jmp    804be69 <function10+0x69>
+ 804c182:	e9 06 fd ff ff       	jmp    804be8d <function10+0x8d>
+ 804c187:	51                   	push   ecx
+ 804c188:	eb 05                	jmp    804c18f <function10+0x38f>
+ 804c18a:	e9 79 fc ff ff       	jmp    804be08 <function10+0x8>
+ 804c18f:	e9 84 fd ff ff       	jmp    804bf18 <function10+0x118>
+ 804c194:	e9 bb fd ff ff       	jmp    804bf54 <function10+0x154>
+ 804c199:	e9 f2 fe ff ff       	jmp    804c090 <function10+0x290>
+ 804c19e:	e9 f6 01 00 00       	jmp    804c399 <function10+0x599>
+ 804c1a3:	31 c0                	xor    eax,eax
+ 804c1a5:	e9 e2 fd ff ff       	jmp    804bf8c <function10+0x18c>
+ 804c1aa:	f7 fb                	idiv   ebx
+ 804c1ac:	e9 78 fd ff ff       	jmp    804bf29 <function10+0x129>
+ 804c1b1:	e9 4f 02 00 00       	jmp    804c405 <function10+0x605>
+ 804c1b6:	e9 64 fd ff ff       	jmp    804bf1f <function10+0x11f>
+ 804c1bb:	e9 09 fd ff ff       	jmp    804bec9 <function10+0xc9>
+ 804c1c0:	e9 ec 01 00 00       	jmp    804c3b1 <function10+0x5b1>
+ 804c1c5:	e9 d7 fe ff ff       	jmp    804c0a1 <function10+0x2a1>
+ 804c1ca:	e9 2d fe ff ff       	jmp    804bffc <function10+0x1fc>
+ 804c1cf:	3d 80 96 98 00       	cmp    eax,0x989680					/ .61.1
+ 804c1d4:	e9 50 fe ff ff       	jmp    804c029 <function10+0x229>
+ 804c1d9:	e9 01 02 00 00       	jmp    804c3df <function10+0x5df>
+ 804c1de:	e9 5e fc ff ff       	jmp    804be41 <function10+0x41>
+ 804c1e3:	e9 48 01 00 00       	jmp    804c330 <function10+0x530>
+ 804c1e8:	e9 1e fe ff ff       	jmp    804c00b <function10+0x20b>
+ 804c1ed:	e9 af fe ff ff       	jmp    804c0a1 <function10+0x2a1>
+ 804c1f2:	e9 69 ff ff ff       	jmp    804c160 <function10+0x360>
+ 804c1f7:	e9 c5 00 00 00       	jmp    804c2c1 <function10+0x4c1>
+ 804c1fc:	eb 1d                	jmp    804c21b <function10+0x41b>
+ 804c1fe:	e9 d2 fe ff ff       	jmp    804c0d5 <function10+0x2d5>
+ 804c203:	e9 7e 01 00 00       	jmp    804c386 <function10+0x586>
+ 804c208:	59                   	pop    ecx
+ 804c209:	eb ce                	jmp    804c1d9 <function10+0x3d9>
+ 804c20b:	0f 8e 0b fc ff ff    	jle    804be1c <function10+0x1c>
+ 804c211:	e9 d5 fd ff ff       	jmp    804bfeb <function10+0x1eb>
+ 804c216:	e9 e9 00 00 00       	jmp    804c304 <function10+0x504>
+ 804c21b:	e9 13 ff ff ff       	jmp    804c133 <function10+0x333>
+ 804c220:	e9 85 01 00 00       	jmp    804c3aa <function10+0x5aa>
+ 804c225:	eb 57                	jmp    804c27e <function10+0x47e>
+ 804c227:	e9 9d fd ff ff       	jmp    804bfc9 <function10+0x1c9>
+ 804c22c:	e9 bd fc ff ff       	jmp    804beee <function10+0xee>
+ 804c231:	e9 16 ff ff ff       	jmp    804c14c <function10+0x34c>
+ 804c236:	e9 2f ff ff ff       	jmp    804c16a <function10+0x36a>
+ 804c23b:	e9 41 fc ff ff       	jmp    804be81 <function10+0x81>
+ 804c240:	e9 7d fc ff ff       	jmp    804bec2 <function10+0xc2>
+ 804c245:	e9 81 fe ff ff       	jmp    804c0cb <function10+0x2cb>
+ 804c24a:	0f af da             	imul   ebx,edx
+ 804c24d:	e9 cd 00 00 00       	jmp    804c31f <function10+0x51f>
+ 804c252:	e9 7c fc ff ff       	jmp    804bed3 <function10+0xd3>
+ 804c257:	e9 ca fb ff ff       	jmp    804be26 <function10+0x26>
+ 804c25c:	e9 68 fd ff ff       	jmp    804bfc9 <function10+0x1c9>
+ 804c261:	eb 11                	jmp    804c274 <function10+0x474>
+ 804c263:	e9 d0 fe ff ff       	jmp    804c138 <function10+0x338>
+ 804c268:	e9 eb fd ff ff       	jmp    804c058 <function10+0x258>
+ 804c26d:	bb 0a 00 00 00       	mov    ebx,0xa					 /.60.20.21.1
+ 804c272:	eb 41                	jmp    804c2b5 <function10+0x4b5>
+ 804c274:	e9 50 fc ff ff       	jmp    804bec9 <function10+0xc9>
+ 804c279:	e9 79 ff ff ff       	jmp    804c1f7 <function10+0x3f7>
+ 804c27e:	eb 41                	jmp    804c2c1 <function10+0x4c1>
+ 804c280:	e9 90 fd ff ff       	jmp    804c015 <function10+0x215>
+ 804c285:	eb ed                	jmp    804c274 <function10+0x474>
+ 804c287:	eb 0a                	jmp    804c293 <function10+0x493>
+ 804c289:	e9 a7 fc ff ff       	jmp    804bf35 <function10+0x135>
+ 804c28e:	e9 b3 00 00 00       	jmp    804c346 <function10+0x546>
+ 804c293:	e9 de fe ff ff       	jmp    804c176 <function10+0x376>
+ 804c298:	eb 47                	jmp    804c2e1 <function10+0x4e1>
+ 804c29a:	e9 54 01 00 00       	jmp    804c3f3 <function10+0x5f3>
+ 804c29f:	e9 12 ff ff ff       	jmp    804c1b6 <function10+0x3b6>
+ 804c2a4:	e9 c2 fd ff ff       	jmp    804c06b <function10+0x26b>
+ 804c2a9:	e9 20 fd ff ff       	jmp    804bfce <function10+0x1ce>
+ 804c2ae:	e9 2c fd ff ff       	jmp    804bfdf <function10+0x1df>
+ 804c2b3:	eb 9d                	jmp    804c252 <function10+0x452>
+ 804c2b5:	eb 7e                	jmp    804c335 <function10+0x535>
+ 804c2b7:	e9 4c ff ff ff       	jmp    804c208 <function10+0x408>
+ 804c2bc:	e9 17 fc ff ff       	jmp    804bed8 <function10+0xd8>
+ 804c2c1:	e9 3b fe ff ff       	jmp    804c101 <function10+0x301>
+ 804c2c6:	e9 31 fd ff ff       	jmp    804bffc <function10+0x1fc>
+ 804c2cb:	e9 6d fd ff ff       	jmp    804c03d <function10+0x23d>
+ 804c2d0:	e9 e1 fe ff ff       	jmp    804c1b6 <function10+0x3b6>
+ 804c2d5:	e9 fb fc ff ff       	jmp    804bfd5 <function10+0x1d5>
+ 804c2da:	eb b7                	jmp    804c293 <function10+0x493>
+ 804c2dc:	e9 89 fe ff ff       	jmp    804c16a <function10+0x36a>
+ 804c2e1:	49                   	dec    ecx
+ 804c2e2:	e9 9f fb ff ff       	jmp    804be86 <function10+0x86>
+ 804c2e7:	e9 90 00 00 00       	jmp    804c37c <function10+0x57c>
+ 804c2ec:	e9 8c fc ff ff       	jmp    804bf7d <function10+0x17d>
+ 804c2f1:	e9 15 fd ff ff       	jmp    804c00b <function10+0x20b>
+ 804c2f6:	eb a0                	jmp    804c298 <function10+0x498>
+ 804c2f8:	eb 7c                	jmp    804c376 <function10+0x576>
+ 804c2fa:	e9 3b fc ff ff       	jmp    804bf3a <function10+0x13a>
+ 804c2ff:	e9 96 fd ff ff       	jmp    804c09a <function10+0x29a>
+ 804c304:	31 d2                	xor    edx,edx					/.60.20.21.2
+ 804c306:	e9 e7 fc ff ff       	jmp    804bff2 <function10+0x1f2>
+ 804c30b:	e9 71 fb ff ff       	jmp    804be81 <function10+0x81>
+ 804c310:	e9 ca fc ff ff       	jmp    804bfdf <function10+0x1df>
+ 804c315:	e9 b4 fb ff ff       	jmp    804bece <function10+0xce>
+ 804c31a:	e9 af 00 00 00       	jmp    804c3ce <function10+0x5ce>
+ 804c31f:	e9 c0 fb ff ff       	jmp    804bee4 <function10+0xe4>
+ 804c324:	e9 a5 fb ff ff       	jmp    804bece <function10+0xce>
+ 804c329:	e9 cd 00 00 00       	jmp    804c3fb <function10+0x5fb>
+ 804c32e:	eb 5d                	jmp    804c38d <function10+0x58d>
+ 804c330:	e9 82 fd ff ff       	jmp    804c0b7 <function10+0x2b7>
+ 804c335:	e9 dc fe ff ff       	jmp    804c216 <function10+0x416>
+ 804c33a:	e9 57 fc ff ff       	jmp    804bf96 <function10+0x196>
+ 804c33f:	e9 bb fb ff ff       	jmp    804beff <function10+0xff>
+ 804c344:	eb 7a                	jmp    804c3c0 <function10+0x5c0>
+ 804c346:	e9 66 fe ff ff       	jmp    804c1b1 <function10+0x3b1>
+ 804c34b:	e9 e6 fe ff ff       	jmp    804c236 <function10+0x436>
+ 804c350:	53                   	push   ebx							/	.1
+ 804c351:	e9 cf fe ff ff       	jmp    804c225 <function10+0x425>
+ 804c356:	e9 2a ff ff ff       	jmp    804c285 <function10+0x485>
+ 804c35b:	8b 4e 04             	mov    ecx,DWORD PTR [esi+0x4]
+ 804c35e:	e9 08 fb ff ff       	jmp    804be6b <function10+0x6b>
+ 804c363:	eb 05                	jmp    804c36a <function10+0x56a>
+ 804c365:	e9 a8 fa ff ff       	jmp    804be12 <function10+0x12>
+ 804c36a:	eb 93                	jmp    804c2ff <function10+0x4ff>
+ 804c36c:	e9 5d fb ff ff       	jmp    804bece <function10+0xce>
+ 804c371:	e9 4b ff ff ff       	jmp    804c2c1 <function10+0x4c1>
+ 804c376:	5b                   	pop    ebx							/  .60.2
+ 804c377:	e9 3c fb ff ff       	jmp    804beb8 <function10+0xb8>
+ 804c37c:	e9 00 fb ff ff       	jmp    804be81 <function10+0x81>
+ 804c381:	e9 d9 fa ff ff       	jmp    804be5f <function10+0x5f>
+ 804c386:	eb a8                	jmp    804c330 <function10+0x530>
+ 804c388:	e9 2e fe ff ff       	jmp    804c1bb <function10+0x3bb>
+ 804c38d:	e9 eb fb ff ff       	jmp    804bf7d <function10+0x17d>
+ 804c392:	e9 a1 fd ff ff       	jmp    804c138 <function10+0x338>
+ 804c397:	eb bd                	jmp    804c356 <function10+0x556>
+ 804c399:	e9 6d fe ff ff       	jmp    804c20b <function10+0x40b>
+ 804c39e:	eb 60                	jmp    804c400 <function10+0x600>
+ 804c3a0:	e9 9d fd ff ff       	jmp    804c142 <function10+0x342>
+ 804c3a5:	e9 9f fb ff ff       	jmp    804bf49 <function10+0x149>
+ 804c3aa:	eb 54                	jmp    804c400 <function10+0x600>
+ 804c3ac:	e9 6e fc ff ff       	jmp    804c01f <function10+0x21f>
+ 804c3b1:	e9 27 fb ff ff       	jmp    804bedd <function10+0xdd>
+ 804c3b6:	e9 41 fc ff ff       	jmp    804bffc <function10+0x1fc>
+ 804c3bb:	e9 ab fc ff ff       	jmp    804c06b <function10+0x26b>
+ 804c3c0:	e9 8e fc ff ff       	jmp    804c053 <function10+0x253>
+ 804c3c5:	e9 97 fc ff ff       	jmp    804c061 <function10+0x261>
+ 804c3ca:	eb d9                	jmp    804c3a5 <function10+0x5a5>
+ 804c3cc:	eb 32                	jmp    804c400 <function10+0x600>
+ 804c3ce:	eb 9a                	jmp    804c36a <function10+0x56a>
+ 804c3d0:	eb 29                	jmp    804c3fb <function10+0x5fb>
+ 804c3d2:	83 f9 00             	cmp    ecx,0x0
+ 804c3d5:	e9 92 fb ff ff       	jmp    804bf6c <function10+0x16c>
+ 804c3da:	e9 f0 fd ff ff       	jmp    804c1cf <function10+0x3cf>
+ 804c3df:	e9 af fe ff ff       	jmp    804c293 <function10+0x493>
+ 804c3e4:	e9 f8 fc ff ff       	jmp    804c0e1 <function10+0x2e1>
+ 804c3e9:	e9 75 ff ff ff       	jmp    804c363 <function10+0x563>
+ 804c3ee:	e9 8b fe ff ff       	jmp    804c27e <function10+0x47e>
+ 804c3f3:	83 f8 00             	cmp    eax,0x0						/.61.20.1
+ 804c3f6:	e9 5a fa ff ff       	jmp    804be55 <function10+0x55>
+ 804c3fb:	e9 1c fa ff ff       	jmp    804be1c <function10+0x1c>
+ 804c400:	e9 7f fc ff ff       	jmp    804c084 <function10+0x284>
+ 804c405:	89 ec                	mov    esp,ebp
+ 804c407:	5d                   	pop    ebp
+ 804c408:	c3                   	ret
+
+//Funtion 10 executed instructions
+ 804c350:	53                   	push   ebx
+ 804c101:	8b 75 0c             	mov    esi,DWORD PTR [ebp+0xc]	
+ 804be72:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+ 804c0ef:	b9 00 00 00 00       	mov    ecx,0x0
+ 804be94:	83 f8 01             	cmp    eax,0x1
+ 804bedd:	7e bd                	jle    804be9c <function10+0x9c>
+ IF
+ 	804bf5b:	31 c0                	xor    eax,eax
+ 	804c376:	5b                   	pop    ebx
+ 	RETURN FALSE
+
+ 804c1cf:	3d 80 96 98 00       	cmp    eax,0x989680	
+ 804bf49:	0f 8c 4b 03 00 00    	jl     804c29a <function10+0x49a>
+ IF	NOT
+  	804bf5b:	31 c0                	xor    eax,eax
+ 	804c376:	5b                   	pop    ebx
+ 	RETURN FALSE	
+
+ LOOP
+ 	804c3f3:	83 f8 00             	cmp    eax,0x0
+ 	804bfaa:	0f 8e c0 00 00 00    	jle    804c070 <function10+0x270>
+
+ 	804c26d:	bb 0a 00 00 00       	mov    ebx,0xa
+ 	804c304:	31 d2                	xor    edx,edx 
+ 	804c1aa:	f7 fb                	idiv   ebx
+ 	804c187:	51                   	push   ecx
+ 	804c35b:	8b 4e 04             	mov    ecx,DWORD PTR [esi+0x4]
+ 	804bf1f:	bb 01 00 00 00       	mov    ebx,0x1
+	LOOP
+		804c3d2:	83 f9 00             	cmp    ecx,0x0
+ 		804c20b:	0f 8e 0b fc ff ff    	jle    804be1c <function10+0x1c>
+ 	
+		804c24a:	0f af da             	imul   ebx,edx
+ 		804c2e1:	49                   	dec    ecx
+ 	804c208:	59                   	pop    ecx
+ 	804c176:	01 d9                	add    ecx,ebx
+ 804c0f9:	3b 4d 08             	cmp    ecx,DWORD PTR [ebp+0x8]
+ 804bea6:	0f 84 13 01 00 00    	je     804bfbf <function10+0x1bf>
+ IF
+ 	804c0c1:	b8 01 00 00 00       	mov    eax,0x1
+ 	804c376:	5b                   	pop    ebx
+ 	RETURN TRUE
+ ELSE
+ 	804c1a3:	31 c0                	xor    eax,eax
+ 	804c376:	5b                   	pop    ebx
+ 	RETURN FALSE

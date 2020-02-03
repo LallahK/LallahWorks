@@ -1,0 +1,44 @@
+explode	: 804aa8a
+phase 2	: 804a177
+phase 3	: 804a1d6
+phase 4	: 804a7ac
+phase 5 : 804bd5f
+phase 6 : 804c40c
+
+"A Lannister always pays his debts."
+"When you play the game of thrones, you win or you die."
+
+<<<<,,, = 1
+<<<<<<<<<<<<<,,,,,,,,,, = -1
+
+Version1.0
+L4	: ] End loop looking at 2c[10]
+L6	: [	Add 2c[10] to final string
+L7	: >	Char 2c[10] minus 11
+L8	: < Inc 10 by 13
+L9	: . Char 2c[10] plus 6
+L10	: -	Add letter to char
+L11	: , Dec 10 by 17
+L12	: + Start loop
+
+-+<<<<,,,-]+<<<<<<<<<<<<<,,,,,,,,,,[]
+
+Version2.0
+L4	: ]	Output
+L6	: [ End Loop
+L7	: > Start loop
+L8	: < Char 2c[10] plus 21
+L9	: . Char 2c[10] minus 13
+L10	: - Inc 10 by 8
+L11	: , Read
+L12	: + Decc 10 by 17
+
+2c	: Char
+28	: Final String
+24	: PC
+20	: 0 
+1c	: Final String Length
+18	: Char index
+14	: Instruction Pointer
+10	:
+c	: Loop Indicator

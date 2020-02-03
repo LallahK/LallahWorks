@@ -1,0 +1,406 @@
+0804b8d9 <phase_4>:
+ 804b8d9:	55                   	push   ebp
+ 804b8da:	89 e5                	mov    ebp,esp
+ 804b8dc:	83 ec 38             	sub    esp,0x38
+ 804b8df:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+ 804b8e2:	89 45 d4             	mov    DWORD PTR [ebp-0x2c],eax		//Ph4
+ 804b8e5:	65 a1 14 00 00 00    	mov    eax,gs:0x14
+ 804b8eb:	89 45 f4             	mov    DWORD PTR [ebp-0xc],eax		//RanNum
+ 804b8ee:	31 c0                	xor    eax,eax
+ 804b8f0:	e8 70 f2 ff ff       	call   804ab65 <read_line>
+ 804b8f5:	89 45 e8             	mov    DWORD PTR [ebp-0x18],eax		//Input
+ 804b8f8:	8b 45 d4             	mov    eax,DWORD PTR [ebp-0x2c]
+ 804b8fb:	8b 00                	mov    eax,DWORD PTR [eax]			
+ 804b8fd:	83 c0 01             	add    eax,0x1
+ 804b900:	89 45 ec             	mov    DWORD PTR [ebp-0x14],eax		//Ph4+1
+ 804b903:	83 ec 0c             	sub    esp,0xc
+ 804b906:	68 90 01 00 00       	push   0x190
+ 804b90b:	e8 b0 de ff ff       	call   80497c0 <malloc@plt>
+ 804b910:	83 c4 10             	add    esp,0x10
+ 804b913:	89 45 f0             	mov    DWORD PTR [ebp-0x10],eax		// ->
+ 804b916:	c7 45 e4 00 00 00 00 	mov    DWORD PTR [ebp-0x1c],0x0
+ 804b91d:	83 7d e8 00          	cmp    DWORD PTR [ebp-0x18],0x0
+
+ 804b921:	75 12                	jne    804b935 <phase_4+0x5c>
+ 804b923:	83 ec 08             	sub    esp,0x8
+ 804b926:	68 98 e8 08 08       	push   0x808e898
+ 804b92b:	6a 04                	push   0x4
+ 804b92d:	e8 58 f1 ff ff       	call   804aa8a <explode_bomb>
+
+ 804b932:	83 c4 10             	add    esp,0x10
+ 804b935:	83 ec 08             	sub    esp,0x8
+ 804b938:	ff 75 e8             	push   DWORD PTR [ebp-0x18]
+ 804b93b:	ff 75 d4             	push   DWORD PTR [ebp-0x2c]
+ 804b93e:	e8 b4 00 00 00       	call   804b9f7 <phase_4+0x11e>
+
+			// Return after parsing password
+ 804b943:	83 c4 10             	add    esp,0x10
+ 804b946:	83 ec 04             	sub    esp,0x4
+ 804b949:	8d 45 e4             	lea    eax,[ebp-0x1c]
+ 804b94c:	50                   	push   eax
+ 804b94d:	ff 75 f0             	push   DWORD PTR [ebp-0x10]
+ 804b950:	ff 75 e8             	push   DWORD PTR [ebp-0x18]
+ 804b953:	e8 ca 01 00 00       	call   804bb22 <phase_4+0x249>
+ 
+ 804b958:	83 c4 10             	add    esp,0x10
+ 804b95b:	8b 45 e4             	mov    eax,DWORD PTR [ebp-0x1c]
+ 804b95e:	83 f8 01             	cmp    eax,0x1
+ 804b961:	74 1e                	je     804b981 <phase_4+0xa8>
+ 804b963:	83 ec 0c             	sub    esp,0xc
+ 804b966:	ff 75 f0             	push   DWORD PTR [ebp-0x10]
+ 804b969:	e8 d2 db ff ff       	call   8049540 <free@plt>
+ 804b96e:	83 c4 10             	add    esp,0x10
+ 804b971:	83 ec 08             	sub    esp,0x8
+ 804b974:	ff 75 e8             	push   DWORD PTR [ebp-0x18]
+ 804b977:	6a 04                	push   0x4
+ 804b979:	e8 0c f1 ff ff       	call   804aa8a <explode_bomb>
+ 804b97e:	83 c4 10             	add    esp,0x10
+ 804b981:	8b 45 e4             	mov    eax,DWORD PTR [ebp-0x1c]
+ 804b984:	83 e8 01             	sub    eax,0x1
+ 804b987:	89 45 e4             	mov    DWORD PTR [ebp-0x1c],eax
+ 804b98a:	8b 45 e4             	mov    eax,DWORD PTR [ebp-0x1c]
+ 804b98d:	8d 14 85 00 00 00 00 	lea    edx,[eax*4+0x0]
+ 804b994:	8b 45 f0             	mov    eax,DWORD PTR [ebp-0x10]
+ 804b997:	01 d0                	add    eax,edx
+ 804b999:	8b 10                	mov    edx,DWORD PTR [eax]
+ 804b99b:	8b 45 ec             	mov    eax,DWORD PTR [ebp-0x14]
+ 804b99e:	05 ff ff ff 3f       	add    eax,0x3fffffff
+ 804b9a3:	8d 0c 85 00 00 00 00 	lea    ecx,[eax*4+0x0]
+ 804b9aa:	8b 45 d4             	mov    eax,DWORD PTR [ebp-0x2c]
+ 804b9ad:	01 c8                	add    eax,ecx
+ 804b9af:	8b 00                	mov    eax,DWORD PTR [eax]
+ 804b9b1:	39 c2                	cmp    edx,eax
+ 804b9b3:	74 1e                	je     804b9d3 <phase_4+0xfa>
+ 804b9b5:	83 ec 0c             	sub    esp,0xc
+ 804b9b8:	ff 75 f0             	push   DWORD PTR [ebp-0x10]
+ 804b9bb:	e8 80 db ff ff       	call   8049540 <free@plt>
+ 804b9c0:	83 c4 10             	add    esp,0x10
+ 804b9c3:	83 ec 08             	sub    esp,0x8
+ 804b9c6:	ff 75 e8             	push   DWORD PTR [ebp-0x18]
+ 804b9c9:	6a 04                	push   0x4
+ 804b9cb:	e8 ba f0 ff ff       	call   804aa8a <explode_bomb>
+ 804b9d0:	83 c4 10             	add    esp,0x10
+ 804b9d3:	83 ec 0c             	sub    esp,0xc
+ 804b9d6:	ff 75 f0             	push   DWORD PTR [ebp-0x10]
+ 804b9d9:	e8 62 db ff ff       	call   8049540 <free@plt>
+ 804b9de:	83 c4 10             	add    esp,0x10
+ 804b9e1:	8b 45 e8             	mov    eax,DWORD PTR [ebp-0x18]
+ 804b9e4:	8b 4d f4             	mov    ecx,DWORD PTR [ebp-0xc]
+ 804b9e7:	65 33 0d 14 00 00 00 	xor    ecx,DWORD PTR gs:0x14
+ 804b9ee:	74 05                	je     804b9f5 <phase_4+0x11c>
+ 804b9f0:	e8 5b dc ff ff       	call   8049650 <__stack_chk_fail@plt>
+ 804b9f5:	c9                   	leave  
+ 804b9f6:	c3                   	ret    
+
+ 804b9f7:	55                   	push   ebp
+ 804b9f8:	89 e5                	mov    ebp,esp
+ 804b9fa:	83 ec 18             	sub    esp,0x18
+ 804b9fd:	83 ec 0c             	sub    esp,0xc
+ 804ba00:	ff 75 0c             	push   DWORD PTR [ebp+0xc]
+ 804ba03:	e8 58 de ff ff       	call   8049860 <strlen@plt>
+ 804ba08:	83 c4 10             	add    esp,0x10
+ 804ba0b:	89 45 f0             	mov    DWORD PTR [ebp-0x10],eax		//strLen
+ 804ba0e:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+ 804ba11:	8b 00                	mov    eax,DWORD PTR [eax]
+ 804ba13:	83 e8 01             	sub    eax,0x1						//Ph4-1
+ 804ba16:	89 45 f4             	mov    DWORD PTR [ebp-0xc],eax
+ 804ba19:	c7 45 ec 00 00 00 00 	mov    DWORD PTR [ebp-0x14],0x0
+ 804ba20:	c7 45 e8 00 00 00 00 	mov    DWORD PTR [ebp-0x18],0x0
+ 804ba27:	eb 77                	jmp    804baa0 <phase_4+0x1c7>
+
+ 804ba29:	8b 55 e8             	mov    edx,DWORD PTR [ebp-0x18]
+ 804ba2c:	8b 45 0c             	mov    eax,DWORD PTR [ebp+0xc]
+ 804ba2f:	01 d0                	add    eax,edx
+ 			// Get letter (ebp+0xc) in password
+ 804ba31:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+ 804ba34:	0f be c0             	movsx  eax,al
+ 804ba37:	83 ec 0c             	sub    esp,0xc
+ 804ba3a:	50                   	push   eax
+ 804ba3b:	e8 83 00 00 00       	call   804bac3 <phase_4+0x1ea>
+
+ 804ba40:	83 c4 10             	add    esp,0x10
+ 804ba43:	85 c0                	test   eax,eax
+ 804ba45:	75 54                	jne    804ba9b <phase_4+0x1c2>
+ 804ba47:	8b 45 ec             	mov    eax,DWORD PTR [ebp-0x14]
+ 804ba4a:	3b 45 f4             	cmp    eax,DWORD PTR [ebp-
+ 804ba4d:	7c 10                	jl     804ba5f <phase_4+0x186>
+ 804ba4f:	83 ec 08             	sub    esp,0x8
+ 804ba52:	ff 75 0c             	push   DWORD PTR [ebp+0xc]
+ 804ba55:	6a 04                	push   0x4
+ 804ba57:	e8 2e f0 ff ff       	call   804aa8a <explode_bomb>
+ 804ba5c:	83 c4 10             	add    esp,0x10
+ 804ba5f:	83 45 ec 01          	add    DWORD PTR [ebp-0x14],0x1		//Count
+ 804ba63:	8b 45 ec             	mov    eax,DWORD PTR [ebp-0x14]
+ 804ba66:	8d 14 85 00 00 00 00 	lea    edx,[eax*4+0x0]
+ 804ba6d:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+ 804ba70:	01 d0                	add    eax,edx
+ 804ba72:	8b 00                	mov    eax,DWORD PTR [eax]
+ 804ba74:	8b 4d e8             	mov    ecx,DWORD PTR [ebp-0x18]
+ 804ba77:	8b 55 0c             	mov    edx,DWORD PTR [ebp+0xc]
+ 804ba7a:	01 ca                	add    edx,ecx
+ 804ba7c:	0f b6 12             	movzx  edx,BYTE PTR [edx]
+ 804ba7f:	0f be d2             	movsx  edx,dl
+ 804ba82:	83 ea 30             	sub    edx,0x30
+ 804ba85:	39 d0                	cmp    eax,edx		//Ph4 is array
+ 804ba87:	74 13                	je     804ba9c <phase_4+0x1c3>
+ 804ba89:	83 ec 08             	sub    esp,0x8
+ 804ba8c:	ff 75 0c             	push   DWORD PTR [ebp+0xc]
+ 804ba8f:	6a 04                	push   0x4
+ 804ba91:	e8 f4 ef ff ff       	call   804aa8a <explode_bomb>
+ 804ba96:	83 c4 10             	add    esp,0x10
+ 804ba99:	eb 01                	jmp    804ba9c <phase_4+0x1c3>
+ 804ba9b:	90                   	nop
+ 804ba9c:	83 45 e8 01          	add    DWORD PTR [ebp-0x18],0x1
+
+ 804baa0:	8b 45 e8             	mov    eax,DWORD PTR [ebp-0x18]
+ 804baa3:	3b 45 f0             	cmp    eax,DWORD PTR [ebp-0x10]
+ 804baa6:	7c 81                	jl     804ba29 <phase_4+0x150>
+
+ 804baa8:	8b 45 ec             	mov    eax,DWORD PTR [ebp-0x14]
+ 804baab:	3b 45 f4             	cmp    eax,DWORD PTR [ebp-0xc]
+ 804baae:	74 10                	je     804bac0 <phase_4+0x1e7>
+ 804bab0:	83 ec 08             	sub    esp,0x8
+ 804bab3:	ff 75 0c             	push   DWORD PTR [ebp+0xc]
+ 804bab6:	6a 04                	push   0x4
+ 804bab8:	e8 cd ef ff ff       	call   804aa8a <explode_bomb>
+ 804babd:	83 c4 10             	add    esp,0x10
+ 804bac0:	90                   	nop
+ 804bac1:	c9                   	leave  
+ 804bac2:	c3                   	ret
+
+ 804bac3:	55                   	push   ebp
+ 804bac4:	89 e5                	mov    ebp,esp
+ 804bac6:	83 ec 18             	sub    esp,0x18
+ 804bac9:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+ 804bacc:	88 45 f4             	mov    BYTE PTR [ebp-0xc],al
+ 			// Compare letter to '*'
+ 804bacf:	80 7d f4 2a          	cmp    BYTE PTR [ebp-0xc],0x2a
+ 804bad3:	75 07                	jne    804badc <phase_4+0x203>
+ 804bad5:	b8 01 00 00 00       	mov    eax,0x1
+ 804bada:	eb 44                	jmp    804bb20 <phase_4+0x247>
+			// Compare letter to '+'
+ 804badc:	80 7d f4 2b          	cmp    BYTE PTR [ebp-0xc],0x2b
+ 804bae0:	75 07                	jne    804bae9 <phase_4+0x210>
+ 804bae2:	b8 01 00 00 00       	mov    eax,0x1
+ 804bae7:	eb 37                	jmp    804bb20 <phase_4+0x247>
+ 			// Compare letter to '-'
+ 804bae9:	80 7d f4 2d          	cmp    BYTE PTR [ebp-0xc],0x2d
+ 804baed:	75 07                	jne    804baf6 <phase_4+0x21d>
+ 804baef:	b8 01 00 00 00       	mov    eax,0x1
+ 804baf4:	eb 2a                	jmp    804bb20 <phase_4+0x247>
+ 804baf6:	e8 55 e0 ff ff       	call   8049b50 <__ctype_b_loc@plt>
+ 804bafb:	8b 00                	mov    eax,DWORD PTR [eax]
+ 804bafd:	0f be 55 f4          	movsx  edx,BYTE PTR [ebp-0xc]
+ 804bb01:	01 d2                	add    edx,edx
+ 804bb03:	01 d0                	add    eax,edx
+ 804bb05:	0f b7 00             	movzx  eax,WORD PTR [eax]
+ 804bb08:	0f b7 c0             	movzx  eax,ax
+ 804bb0b:	25 00 20 00 00       	and    eax,0x2000
+ 804bb10:	85 c0                	test   eax,eax
+ 804bb12:	74 07                	je     804bb1b <phase_4+0x242>
+ 804bb14:	b8 01 00 00 00       	mov    eax,0x1
+ 804bb19:	eb 05                	jmp    804bb20 <phase_4+0x247>
+ 804bb1b:	b8 00 00 00 00       	mov    eax,0x0
+ 804bb20:	c9                   	leave  
+ 804bb21:	c3                   	ret		// to 0x804ba40
+
+ 804bb22:	55                   	push   ebp
+ 804bb23:	89 e5                	mov    ebp,esp
+ 804bb25:	53                   	push   ebx
+ 804bb26:	83 ec 14             	sub    esp,0x14
+ 804bb29:	c7 45 ec 00 00 00 00 	mov    DWORD PTR [ebp-0x14],0x0
+ 804bb30:	83 ec 0c             	sub    esp,0xc
+ 804bb33:	ff 75 08             	push   DWORD PTR [ebp+0x8]
+ 804bb36:	e8 25 dd ff ff       	call   8049860 <strlen@plt>
+ 804bb3b:	83 c4 10             	add    esp,0x10
+ 804bb3e:	89 45 f0             	mov    DWORD PTR [ebp-0x10],eax
+ 804bb41:	e9 71 01 00 00       	jmp    804bcb7 <phase_4+0x3de>
+ 
+ 804bb46:	8b 55 ec             	mov    edx,DWORD PTR [ebp-0x14]
+ 804bb49:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+ 804bb4c:	01 d0                	add    eax,edx
+ 804bb4e:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+ 804bb51:	88 45 eb             	mov    BYTE PTR [ebp-0x15],al
+ 804bb54:	0f be 45 eb          	movsx  eax,BYTE PTR [ebp-0x15]
+ 804bb58:	83 f8 2b             	cmp    eax,0x2b
+ 804bb5b:	74 13                	je     804bb70 <phase_4+0x297>
+ 804bb5d:	83 f8 2d             	cmp    eax,0x2d
+ 804bb60:	0f 84 99 00 00 00    	je     804bbff <phase_4+0x326>
+ 804bb66:	83 f8 2a             	cmp    eax,0x2a
+ 804bb69:	74 4c                	je     804bbb7 <phase_4+0x2de>
+ 804bb6b:	e9 d5 00 00 00       	jmp    804bc45 <phase_4+0x36c>
+			// Operation: '+'
+ 804bb70:	83 ec 04             	sub    esp,0x4
+ 804bb73:	ff 75 10             	push   DWORD PTR [ebp+0x10]
+ 804bb76:	ff 75 0c             	push   DWORD PTR [ebp+0xc]
+ 804bb79:	ff 75 08             	push   DWORD PTR [ebp+0x8]
+ 804bb7c:	e8 90 01 00 00       	call   804bd11 <phase_4+0x438>
+ 804bb81:	83 c4 10             	add    esp,0x10
+ 804bb84:	89 c3                	mov    ebx,eax
+ 804bb86:	83 ec 04             	sub    esp,0x4
+ 804bb89:	ff 75 10             	push   DWORD PTR [ebp+0x10]
+ 804bb8c:	ff 75 0c             	push   DWORD PTR [ebp+0xc]
+ 804bb8f:	ff 75 08             	push   DWORD PTR [ebp+0x8]
+ 804bb92:	e8 7a 01 00 00       	call   804bd11 <phase_4+0x438>
+ 804bb97:	83 c4 10             	add    esp,0x10
+ 804bb9a:	01 d8                	add    eax,ebx
+ 804bb9c:	ff 75 10             	push   DWORD PTR [ebp+0x10]
+ 804bb9f:	ff 75 0c             	push   DWORD PTR [ebp+0xc]
+ 804bba2:	ff 75 08             	push   DWORD PTR [ebp+0x8]
+ 804bba5:	50                   	push   eax
+ 804bba6:	e8 1e 01 00 00       	call   804bcc9 <phase_4+0x3f0>
+ 804bbab:	83 c4 10             	add    esp,0x10
+ 804bbae:	83 45 ec 01          	add    DWORD PTR [ebp-0x14],0x1
+ 804bbb2:	e9 00 01 00 00       	jmp    804bcb7 <phase_4+0x3de>
+ 			// Operation: '*'
+ 804bbb7:	83 ec 04             	sub    esp,0x4
+ 804bbba:	ff 75 10             	push   DWORD PTR [ebp+0x10]
+ 804bbbd:	ff 75 0c             	push   DWORD PTR [ebp+0xc]
+ 804bbc0:	ff 75 08             	push   DWORD PTR [ebp+0x8]
+ 804bbc3:	e8 49 01 00 00       	call   804bd11 <phase_4+0x438>
+ 804bbc8:	83 c4 10             	add    esp,0x10 //ret from end
+ 804bbcb:	89 c3                	mov    ebx,eax
+ 804bbcd:	83 ec 04             	sub    esp,0x4
+ 804bbd0:	ff 75 10             	push   DWORD PTR [ebp+0x10]
+ 804bbd3:	ff 75 0c             	push   DWORD PTR [ebp+0xc]
+ 804bbd6:	ff 75 08             	push   DWORD PTR [ebp+0x8]
+ 804bbd9:	e8 33 01 00 00       	call   804bd11 <phase_4+0x438>
+ 804bbde:	83 c4 10             	add    esp,0x10
+ 804bbe1:	0f af c3             	imul   eax,ebx
+ 804bbe4:	ff 75 10             	push   DWORD PTR [ebp+0x10]
+ 804bbe7:	ff 75 0c             	push   DWORD PTR [ebp+0xc]
+ 804bbea:	ff 75 08             	push   DWORD PTR [ebp+0x8]
+ 804bbed:	50                   	push   eax
+ 804bbee:	e8 d6 00 00 00       	call   804bcc9 <phase_4+0x3f0>
+ 804bbf3:	83 c4 10             	add    esp,0x10
+ 804bbf6:	83 45 ec 01          	add    DWORD PTR [ebp-0x14],0x1
+ 804bbfa:	e9 b8 00 00 00       	jmp    804bcb7 <phase_4+0x3de>
+ 804bbff:	83 ec 04             	sub    esp,0x4
+ 804bc02:	ff 75 10             	push   DWORD PTR [ebp+0x10]
+ 804bc05:	ff 75 0c             	push   DWORD PTR [ebp+0xc]
+ 804bc08:	ff 75 08             	push   DWORD PTR [ebp+0x8]
+ 804bc0b:	e8 01 01 00 00       	call   804bd11 <phase_4+0x438>
+ 804bc10:	83 c4 10             	add    esp,0x10
+ 804bc13:	89 45 f4             	mov    DWORD PTR [ebp-0xc],eax
+ 804bc16:	83 ec 04             	sub    esp,0x4
+ 804bc19:	ff 75 10             	push   DWORD PTR [ebp+0x10]
+ 804bc1c:	ff 75 0c             	push   DWORD PTR [ebp+0xc]
+ 804bc1f:	ff 75 08             	push   DWORD PTR [ebp+0x8]
+ 804bc22:	e8 ea 00 00 00       	call   804bd11 <phase_4+0x438>
+ 804bc27:	83 c4 10             	add    esp,0x10
+ 804bc2a:	2b 45 f4             	sub    eax,DWORD PTR [ebp-0xc]
+ 804bc2d:	ff 75 10             	push   DWORD PTR [ebp+0x10]
+ 804bc30:	ff 75 0c             	push   DWORD PTR [ebp+0xc]
+ 804bc33:	ff 75 08             	push   DWORD PTR [ebp+0x8]
+ 804bc36:	50                   	push   eax
+ 804bc37:	e8 8d 00 00 00       	call   804bcc9 <phase_4+0x3f0>
+ 804bc3c:	83 c4 10             	add    esp,0x10
+ 804bc3f:	83 45 ec 01          	add    DWORD PTR [ebp-0x14],0x1
+ 804bc43:	eb 72                	jmp    804bcb7 <phase_4+0x3de>
+			
+			// Not an operation
+ 804bc45:	e8 06 df ff ff       	call   8049b50 <__ctype_b_loc@plt>
+ 804bc4a:	8b 00                	mov    eax,DWORD PTR [eax]
+ 804bc4c:	0f be 55 eb          	movsx  edx,BYTE PTR [ebp-0x15]
+ 804bc50:	01 d2                	add    edx,edx
+ 804bc52:	01 d0                	add    eax,edx
+ 804bc54:	0f b7 00             	movzx  eax,WORD PTR [eax]
+ 804bc57:	0f b7 c0             	movzx  eax,ax
+ 804bc5a:	25 00 08 00 00       	and    eax,0x800
+ 804bc5f:	85 c0                	test   eax,eax
+ 804bc61:	74 1f                	je     804bc82 <phase_4+0x3a9>
+ 804bc63:	0f be 45 eb          	movsx  eax,BYTE PTR [ebp-0x15]
+ 804bc67:	83 e8 30             	sub    eax,0x30
+ 804bc6a:	ff 75 10             	push   DWORD PTR [ebp+0x10]
+ 804bc6d:	ff 75 0c             	push   DWORD PTR [ebp+0xc]
+ 804bc70:	ff 75 08             	push   DWORD PTR [ebp+0x8]
+ 804bc73:	50                   	push   eax
+ 804bc74:	e8 50 00 00 00       	call   804bcc9 <phase_4+0x3f0>
+
+ 804bc79:	83 c4 10             	add    esp,0x10
+ 804bc7c:	83 45 ec 01          	add    DWORD PTR [ebp-0x14],0x1
+ 804bc80:	eb 35                	jmp    804bcb7 <phase_4+0x3de>
+ 804bc82:	e8 c9 de ff ff       	call   8049b50 <__ctype_b_loc@plt>
+ 804bc87:	8b 00                	mov    eax,DWORD PTR [eax]
+ 804bc89:	0f be 55 eb          	movsx  edx,BYTE PTR [ebp-0x15]
+ 804bc8d:	01 d2                	add    edx,edx
+ 804bc8f:	01 d0                	add    eax,edx
+ 804bc91:	0f b7 00             	movzx  eax,WORD PTR [eax]
+ 804bc94:	0f b7 c0             	movzx  eax,ax
+ 804bc97:	25 00 20 00 00       	and    eax,0x2000
+ 804bc9c:	85 c0                	test   eax,eax
+ 804bc9e:	74 06                	je     804bca6 <phase_4+0x3cd>
+ 804bca0:	83 45 ec 01          	add    DWORD PTR [ebp-0x14],0x1
+ 804bca4:	eb 11                	jmp    804bcb7 <phase_4+0x3de>
+ 804bca6:	83 ec 08             	sub    esp,0x8
+ 804bca9:	ff 75 08             	push   DWORD PTR [ebp+0x8]
+ 804bcac:	6a 04                	push   0x4
+ 804bcae:	e8 d7 ed ff ff       	call   804aa8a <explode_bomb>
+ 804bcb3:	83 c4 10             	add    esp,0x10
+ 804bcb6:	90                   	nop
+
+ 804bcb7:	8b 45 ec             	mov    eax,DWORD PTR [ebp-0x14]
+ 804bcba:	3b 45 f0             	cmp    eax,DWORD PTR [ebp-0x10]
+ 804bcbd:	0f 8c 83 fe ff ff    	jl     804bb46 <phase_4+0x26d>
+ 804bcc3:	90                   	nop
+ 804bcc4:	8b 5d fc             	mov    ebx,DWORD PTR [ebp-0x4]
+ 804bcc7:	c9                   	leave  
+ 804bcc8:	c3                   	ret    
+
+ 804bcc9:	55                   	push   ebp
+ 804bcca:	89 e5                	mov    ebp,esp
+ 804bccc:	83 ec 08             	sub    esp,0x8
+ 804bccf:	8b 45 14             	mov    eax,DWORD PTR [ebp+0x14]
+ 804bcd2:	8b 00                	mov    eax,DWORD PTR [eax]
+ 804bcd4:	83 f8 63             	cmp    eax,0x63		// > 100
+ 804bcd7:	7f 25                	jg     804bcfe <phase_4+0x425>
+ 804bcd9:	8b 45 14             	mov    eax,DWORD PTR [ebp+0x14]
+ 804bcdc:	8b 00                	mov    eax,DWORD PTR [eax]
+ 804bcde:	8d 14 85 00 00 00 00 	lea    edx,[eax*4+0x0]
+ 804bce5:	8b 45 10             	mov    eax,DWORD PTR [ebp+0x10]
+ 804bce8:	01 c2                	add    edx,eax
+ 804bcea:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+ 804bced:	89 02                	mov    DWORD PTR [edx],eax
+ 804bcef:	8b 45 14             	mov    eax,DWORD PTR [ebp+0x14]
+ 804bcf2:	8b 00                	mov    eax,DWORD PTR [eax]
+ 804bcf4:	8d 50 01             	lea    edx,[eax+0x1]
+ 804bcf7:	8b 45 14             	mov    eax,DWORD PTR [ebp+0x14]
+ 804bcfa:	89 10                	mov    DWORD PTR [eax],edx
+ 804bcfc:	eb 10                	jmp    804bd0e <phase_4+0x435>
+ 804bcfe:	83 ec 08             	sub    esp,0x8
+ 804bd01:	ff 75 0c             	push   DWORD PTR [ebp+0xc]
+ 804bd04:	6a 04                	push   0x4
+ 804bd06:	e8 7f ed ff ff       	call   804aa8a <explode_bomb>
+ 804bd0b:	83 c4 10             	add    esp,0x10
+ 804bd0e:	90                   	nop
+ 804bd0f:	c9                   	leave  
+ 804bd10:	c3                   	ret
+
+ 804bd11:	55                   	push   ebp
+ 804bd12:	89 e5                	mov    ebp,esp
+ 804bd14:	83 ec 08             	sub    esp,0x8
+ 804bd17:	8b 45 10             	mov    eax,DWORD PTR [ebp+0x10]
+ 804bd1a:	8b 00                	mov    eax,DWORD PTR [eax]
+ 804bd1c:	85 c0                	test   eax,eax
+ 804bd1e:	7e 22                	jle    804bd42 <phase_4+0x469>
+ 804bd20:	8b 45 10             	mov    eax,DWORD PTR [ebp+0x10]
+ 804bd23:	8b 00                	mov    eax,DWORD PTR [eax]
+ 804bd25:	8d 50 ff             	lea    edx,[eax-0x1]
+ 804bd28:	8b 45 10             	mov    eax,DWORD PTR [ebp+0x10]
+ 804bd2b:	89 10                	mov    DWORD PTR [eax],edx
+ 804bd2d:	8b 45 10             	mov    eax,DWORD PTR [ebp+0x10]
+ 804bd30:	8b 00                	mov    eax,DWORD PTR [eax]
+ 804bd32:	8d 14 85 00 00 00 00 	lea    edx,[eax*4+0x0]
+ 804bd39:	8b 45 0c             	mov    eax,DWORD PTR [ebp+0xc]
+ 804bd3c:	01 d0                	add    eax,edx
+ 804bd3e:	8b 00                	mov    eax,DWORD PTR [eax]
+ 804bd40:	eb 15                	jmp    804bd57 <phase_4+0x47e>
+
+ 804bd42:	83 ec 08             	sub    esp,0x8
+ 804bd45:	ff 75 08             	push   DWORD PTR [ebp+0x8]
+ 804bd48:	6a 04                	push   0x4
+ 804bd4a:	e8 3b ed ff ff       	call   804aa8a <explode_bomb>
+ 804bd4f:	83 c4 10             	add    esp,0x10
+ 804bd52:	b8 ff ff ff ff       	mov    eax,0xffffffff
+ 804bd57:	c9                   	leave  
+ 804bd58:	c3                   	ret    
