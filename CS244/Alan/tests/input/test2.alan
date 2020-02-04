@@ -1,0 +1,4 @@
+source i
+begin
+    get whose_your_daddy[-dad + mom]
+end

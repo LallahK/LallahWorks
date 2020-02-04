@@ -1,0 +1,7 @@
+{ for operator }
+source invalid1
+begin
+    integer i;
+    boolean b;
+    i := i + 2
+end

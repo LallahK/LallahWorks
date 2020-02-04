@@ -1,0 +1,14 @@
+{ too many arguments for call to }
+source invalid1
+    function func(integer i) to integer
+    begin
+        leave i
+    end
+begin
+    integer i;
+    i := func(i, i)
+end
+
+{
+alanc: invalid1.alan:9:16: error: too many arguments for call to 'func'
+}

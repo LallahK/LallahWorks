@@ -1,0 +1,4 @@
+source t
+begin
+    ada[a( 2 rem 5)] := 1
+end

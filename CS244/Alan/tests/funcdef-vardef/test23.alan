@@ -1,0 +1,8 @@
+source test23
+function func_22 (  )
+begin boolean vardef_55;
+ relax 
+end
+begin boolean vardef_74, vardef5, vardef177, vardef21, vardef20;
+ relax 
+end

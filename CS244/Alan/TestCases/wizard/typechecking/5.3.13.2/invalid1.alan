@@ -1,0 +1,10 @@
+{ array size: true is not an integer }
+source invalid1
+begin
+    integer array arr;
+    arr := array true
+end
+
+{
+alanc: invalid1.alan:5:18: error: incompatible types (boolean and integer) for array size of 'arr'
+}

@@ -1,0 +1,17 @@
+source triv
+
+integer valid :=   2147483640
+integer invalid := 2147483649 
+
+{Expected output:
+'source'
+'Identifier: 'triv'
+'integer'
+Identifier: 'valid'
+':='
+Number: 2147483640
+'integer'
+'Identifier: 'invalid'
+':='
+<filename>:4:20: error: number too large
+}

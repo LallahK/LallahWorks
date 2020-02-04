@@ -1,0 +1,10 @@
+{ for not }
+source invalid1
+begin
+    boolean b;
+    b := not 1
+end
+
+{
+alanc: invalid1.alan:5:14: error: incompatible types (integer and boolean) for 'not'
+}

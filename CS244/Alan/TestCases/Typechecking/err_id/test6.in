@@ -1,0 +1,9 @@
+source idtest1
+
+begin
+    integer array a;
+    integer b, c;
+    integer b;
+    
+    relax
+end

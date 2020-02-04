@@ -1,0 +1,4 @@
+source e
+begin
+    sdjk[1 or 5] := 1
+end

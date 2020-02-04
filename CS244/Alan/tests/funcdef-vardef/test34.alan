@@ -1,0 +1,12 @@
+source test34
+function func_193 ( integer id199, integer id42 )
+begin boolean vardef_49, vardef19, vardef158;
+ relax 
+end
+function func_18 ( boolean id112, boolean id122, boolean id101 )
+begin boolean array vardef_126, vardef108, vardef24, vardef47, vardef194;
+ relax 
+end
+begin boolean array vardef_14, vardef100;
+ relax 
+end

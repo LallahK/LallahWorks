@@ -1,0 +1,12 @@
+source arrtest7
+
+begin
+    integer array a;
+    boolean array d;
+    integer b, c;
+    
+    a := d;
+    b := 5;
+    c := 5;
+    a[1] := c + b  
+end

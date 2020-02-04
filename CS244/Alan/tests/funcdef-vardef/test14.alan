@@ -1,0 +1,4 @@
+source test14
+begin boolean vardef_90, vardef84;
+ relax 
+end

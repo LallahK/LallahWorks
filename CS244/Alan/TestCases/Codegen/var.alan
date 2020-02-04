@@ -1,0 +1,10 @@
+source var
+begin
+	integer array a;
+	integer b;
+	boolean d;
+	b := 23;
+	a := array 6;
+	a[4] := 5 + b;
+	put a[4]
+end

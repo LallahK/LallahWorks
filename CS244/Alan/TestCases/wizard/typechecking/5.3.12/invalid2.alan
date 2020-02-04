@@ -1,0 +1,9 @@
+{ multiple definition of }
+source invalid2
+begin
+    integer i, j, i;
+end
+
+{
+alanc: invalid2.alan:4:19: error: multiple definition of 'i'
+}

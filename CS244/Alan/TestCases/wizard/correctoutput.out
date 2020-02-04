@@ -1,0 +1,81 @@
+5.3.1
+alanc: invalid1.alan:7:12: error: '+' is an illegal array operation
+alanc: invalid2.alan:7:19: error: '+' is an illegal array operation
+5.3.10
+alanc: invalid1.alan:5:9: error: missing leave expression for a function
+5.3.11
+alanc: invalid1.alan:5:5: error: unknown identifier 'j'
+alanc: invalid2.alan:5:10: error: unknown identifier 'p'
+alanc: invalid3.alan:5:10: error: unknown identifier 'p'
+alanc: invalid4.alan:5:9: error: unknown identifier 'j'
+alanc: invalid5.alan:5:9: error: unknown identifier 'j'
+alanc: invalid6.alan:5:14: error: unknown identifier 'j'
+alanc: invalid7.alan:5:10: error: unknown identifier 'j'
+alanc: invalid8.alan:5:10: error: unknown identifier 'j'
+alanc: invalid9.alan:6:14: error: unknown identifier 'j'
+5.3.12
+alanc: invalid1.alan:5:13: error: multiple definition of 'j'
+alanc: invalid2.alan:4:19: error: multiple definition of 'i'
+alanc: invalid3.alan:6:13: error: multiple definition of 'j'
+5.3.13.1
+alanc: invalid1.alan:5:9: error: incompatible types (boolean and integer) for array index of 'arr'
+alanc: invalid2.alan:9:9: error: incompatible types (integer function and integer) for array index of 'arr'
+alanc: invalid3.alan:9:9: error: incompatible types (boolean and integer) for array index of 'arr'
+alanc: invalid4.alan:5:9: error: incompatible types (integer array and integer) for array index of 'arr'
+5.3.13.2
+alanc: invalid1.alan:5:18: error: incompatible types (boolean and integer) for array size of 'arr'
+alanc: invalid2.alan:9:17: error: incompatible types (integer function and integer) for array size of 'arr'
+alanc: invalid3.alan:9:18: error: incompatible types (boolean and integer) for array size of 'arr'
+alanc: invalid4.alan:5:18: error: incompatible types (integer array and integer) for array size of 'arr'
+5.3.13.3.1
+alanc: invalid1.alan:5:10: error: incompatible types (boolean and integer) for assignment to 'i'
+alanc: invalid2.alan:6:10: error: incompatible types (integer array and integer) for assignment to 'i'
+alanc: invalid3.alan:9:10: error: incompatible types (boolean and integer) for assignment to 'i'
+alanc: invalid4.alan:9:10: error: incompatible types (integer function and integer) for assignment to 'i'
+5.3.13.3.2
+alanc: invalid1.alan:5:15: error: incompatible types (integer array and integer) for allocation to indexed array 'arr'
+5.3.13.4
+alanc: invalid1.alan:5:15: error: incompatible types (boolean and integer) for 'leave' statement
+5.3.13.5
+alanc: invalid1.alan:9:18: error: incompatible types (integer and boolean) for parameter 2 of call to 'func'
+alanc: invalid2.alan:9:15: error: incompatible types (boolean and integer) for parameter 1 of call to 'func'
+5.3.13.6
+alanc: invalid1.alan:6:11: error: incompatible types (integer and boolean) for 'while' guard
+alanc: invalid2.alan:10:11: error: incompatible types (integer and boolean) for 'while' guard
+alanc: invalid3.alan:6:8: error: incompatible types (integer and boolean) for 'if' guard
+alanc: invalid4.alan:10:8: error: incompatible types (integer and boolean) for 'if' guard
+alanc: invalid5.alan:8:11: error: incompatible types (integer and boolean) for 'elsif' guard
+alanc: invalid6.alan:12:11: error: incompatible types (integer and boolean) for 'elsif' guard
+5.3.13.7
+alanc: invalid1.alan:6:12: error: incompatible types (boolean and integer) for operator '+'
+alanc: invalid2.alan:6:12: error: incompatible types (integer and boolean) for operator 'or'
+alanc: invalid3.alan:6:12: error: incompatible types (boolean and integer) for operator '+'
+5.3.13.8
+alanc: invalid1.alan:5:11: error: incompatible types (boolean and integer) for unary minus
+alanc: invalid2.alan:6:11: error: '-' is an illegal array operation
+5.3.13.9
+alanc: invalid1.alan:5:14: error: incompatible types (integer and boolean) for 'not'
+5.3.2
+alanc: invalid1.alan:5:9: error: expected scalar variable instead of 'bool_arr'
+5.3.3
+alanc: invalid1.alan:6:10: error: 'bool_arr' is not a function
+5.3.4
+alanc: invalid1.alan:8:10: error: 'p' is not a procedure
+5.3.5
+alanc: invalid1.alan:8:5: error: 'p' is not a variable
+alanc: invalid2.alan:8:5: error: 'p' is not a variable
+alanc: invalid3.alan:8:9: error: 'p' is not a variable
+5.3.6
+alanc: invalid1.alan:8:5: error: 'p' is not an array
+5.3.7
+alanc: invalid1.alan:9:15: error: too few arguments for call to 'func'
+alanc: invalid2.alan:8:15: error: too few arguments for call to 'proc'
+alanc: invalid3.alan:9:16: error: too few arguments for call to 'func'
+alanc: invalid4.alan:8:16: error: too few arguments for call to 'proc'
+5.3.8
+alanc: invalid1.alan:9:16: error: too many arguments for call to 'func'
+alanc: invalid2.alan:8:16: error: too many arguments for call to 'proc'
+alanc: invalid3.alan:9:15: error: too many arguments for call to 'func'
+alanc: invalid4.alan:8:15: error: too many arguments for call to 'proc'
+5.3.9
+alanc: invalid1.alan:5:15: error: a leave expression is not allowed for a procedure

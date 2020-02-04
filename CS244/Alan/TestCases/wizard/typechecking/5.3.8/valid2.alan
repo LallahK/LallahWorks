@@ -1,0 +1,9 @@
+{ vorrect amount of arguments for call }
+source valid2
+    function proc()
+    begin
+        relax
+    end
+begin
+    call proc()
+end

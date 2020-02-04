@@ -1,0 +1,9 @@
+{ p is a procedure }
+source valid1
+    function p()
+    begin
+        relax
+    end
+begin
+    call p()
+end

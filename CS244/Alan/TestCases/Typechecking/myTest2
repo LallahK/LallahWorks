@@ -1,0 +1,8 @@
+source sums
+
+begin
+    integer a;
+    boolean b;
+    b := true;
+    a := 5 + 6 + 7 + b
+end

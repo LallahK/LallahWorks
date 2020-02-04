@@ -1,0 +1,10 @@
+{ correct amount of arguments for call }
+source valid1
+    function func() to integer
+    begin
+        leave 42
+    end
+begin
+    integer i;
+    i := func()
+end

@@ -1,0 +1,4 @@
+source n
+begin
+    g[a[2+3] * b[-2+5*3]] := 3
+end

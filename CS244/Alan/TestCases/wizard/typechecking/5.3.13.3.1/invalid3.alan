@@ -1,0 +1,14 @@
+{ integer cannot be assigned to boolean }
+source invalid3
+    function f() to boolean
+    begin
+        leave false
+    end
+begin
+    integer i;
+    i := f()
+end
+
+{
+alanc: invalid3.alan:9:10: error: incompatible types (boolean and integer) for assignment to 'i'
+}

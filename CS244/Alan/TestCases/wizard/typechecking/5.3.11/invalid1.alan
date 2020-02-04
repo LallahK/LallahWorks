@@ -1,0 +1,10 @@
+{ unknown identifier }
+source invalid1
+begin
+    integer i;
+    j := i
+end
+
+{ 
+alanc: invalid1.alan:5:5: error: unknown identifier 'j'
+}

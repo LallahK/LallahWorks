@@ -1,0 +1,6 @@
+{ unary minus legal for integers}
+source invalid1
+begin
+    integer i;
+    i := -i - 1
+end

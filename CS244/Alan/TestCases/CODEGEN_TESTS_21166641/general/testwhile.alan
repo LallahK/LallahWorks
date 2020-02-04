@@ -1,0 +1,32 @@
+source testwhile
+begin
+    integer i;
+    boolean j;
+    integer array a;
+    boolean array b;
+    a := array 10;
+    b := array 100;
+    i := 0;
+    while i < 10 do
+        a[i] := i;
+        b[i] := true;
+        i := i + 1
+    end;
+    i := 0;
+    while i < 10 do
+        put a[i] . "\n";
+        i := i + 1
+    end;
+    put "\n";
+    while i > 11 do
+        put "Bad\n"
+    end;
+    put "Good\n";
+    j := false;
+    i := 0;
+    while b[i] <> j do
+        i := i + 1
+    end;
+    put i . "\n";
+    put i = 10 . "\n"
+end

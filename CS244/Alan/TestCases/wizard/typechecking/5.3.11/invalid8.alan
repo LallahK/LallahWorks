@@ -1,0 +1,10 @@
+{ unknown identifier: illegal before j is not a function }
+source invalid8
+begin
+    integer i;
+    i := j()
+end
+
+{
+alanc: invalid8.alan:5:10: error: unknown identifier 'j'
+}

@@ -1,0 +1,35 @@
+source testread
+begin
+    integer x, i;
+    boolean y;
+    integer array a;
+    boolean array b;
+    get x;
+    put x . "\n";
+    get y;
+    put y . "\n";
+    a := array x;
+    b := array x;
+    i := 0;
+    while i < x do
+        get a[i];
+        get b[i];
+        i := i + 1
+    end;
+    while y do
+        get y;
+        if y then
+            i := 0;
+            while i < x do
+                put a[i] . "\n";
+                i := i + 1
+            end
+        else
+            i := 0;
+            while i < x do
+                put b[i] . "\n";
+                i := i + 1
+            end
+        end
+    end
+end

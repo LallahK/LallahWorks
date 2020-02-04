@@ -1,0 +1,6 @@
+{ arr is an arry }
+source valid1
+begin
+    integer array arr;
+    arr[0] := 1
+end

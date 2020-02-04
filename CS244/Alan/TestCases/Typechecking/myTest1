@@ -1,0 +1,9 @@
+source triv
+
+begin
+    boolean array a;
+    integer b;
+    if (a < b) then
+        relax
+    end
+end

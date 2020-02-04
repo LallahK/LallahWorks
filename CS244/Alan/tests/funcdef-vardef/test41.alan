@@ -1,0 +1,17 @@
+source test41
+function func_96 ( integer id173, boolean id86 )
+ to integer array
+begin integer vardef_3;
+ relax 
+end
+function func_10 (  )
+ to integer array
+begin integer vardef_59;
+ relax 
+end
+function func_16 ( integer id162 )
+begin integer array vardef_106;
+ relax 
+end
+begin  relax 
+end

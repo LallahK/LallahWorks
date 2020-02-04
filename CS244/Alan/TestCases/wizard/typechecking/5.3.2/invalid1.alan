@@ -1,0 +1,10 @@
+{scalar variable expected}
+source invalid1
+begin
+    boolean array bool_arr;
+    get bool_arr
+end
+
+{
+alanc: invalid1.alan:5:9: error: expected scalar variable instead of 'bool_arr'
+}

@@ -1,0 +1,7 @@
+:=
+:x
+
+{Expected output:
+':='
+<filename>2:1: error: illegal character ':' (ASCII #58)
+}

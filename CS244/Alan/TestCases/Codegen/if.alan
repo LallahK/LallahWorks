@@ -1,0 +1,33 @@
+source ifs
+begin
+	integer a;
+	
+	put "case 1\n";	
+	a := 1;
+	if (false) then 
+		if (false) then
+			a := 2
+		elsif (false) then
+			a := 3
+		else
+			a := 4
+		end
+{	elsif (false) then
+		if (false) then
+			a := 5
+		elsif (false) then
+			a := 6
+		else
+			a := 7
+		end}
+	else
+		if (false) then
+			a := 8
+		elsif (false) then
+			a := 9
+		else
+			a := 10
+		end
+	end;
+	put (a)." -> 10\n\n"
+end
