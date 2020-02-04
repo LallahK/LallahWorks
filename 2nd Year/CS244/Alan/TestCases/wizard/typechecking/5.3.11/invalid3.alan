@@ -1,0 +1,10 @@
+{ unknown identifier before not being a procedure }
+source invalid3
+begin
+    integer i;
+    call p()
+end
+
+{
+alanc: invalid3.alan:5:10: error: unknown identifier 'p'
+}

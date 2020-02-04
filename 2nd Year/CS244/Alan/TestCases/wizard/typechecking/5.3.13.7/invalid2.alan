@@ -1,0 +1,11 @@
+{ for operator }
+source invalid2
+begin
+    integer i;
+    boolean b;
+    i := i or b;
+end
+
+{
+alanc: invalid2.alan:6:12: error: incompatible types (integer and boolean) for operator 'or'
+}

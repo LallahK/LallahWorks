@@ -1,0 +1,10 @@
+{ correct leave expression for a function }
+source invalid1
+    function func() to integer
+    begin
+        leave 1
+    end
+begin
+    integer i;
+    i := func()
+end

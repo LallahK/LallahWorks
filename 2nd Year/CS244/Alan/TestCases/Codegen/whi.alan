@@ -1,0 +1,10 @@
+source whi
+begin
+	integer a;
+	a := 0;
+	while (a < 8) do
+		a := a + 1;
+		put a."\n"
+	end;
+	put a." done\n"
+end

@@ -1,0 +1,8 @@
+source test17
+function func_169 ( boolean array id188 )
+begin integer vardef_142, vardef103, vardef195;
+ relax 
+end
+begin integer vardef_89;
+ relax 
+end

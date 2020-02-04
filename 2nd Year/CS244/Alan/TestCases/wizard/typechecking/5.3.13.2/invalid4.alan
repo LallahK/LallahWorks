@@ -1,0 +1,10 @@
+{ illegal array size: arr2 is an integer array, not an integer }
+source invalid4
+begin
+    integer array arr, arr2;
+    arr := array arr2
+end
+
+{
+alanc: invalid4.alan:5:18: error: incompatible types (integer array and integer) for array size of 'arr'
+}

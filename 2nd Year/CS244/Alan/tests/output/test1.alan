@@ -1,0 +1,11 @@
+source wr
+begin
+    put "hello world";
+    put 5;
+    put 8 . " planets";
+    put 31 . 312. "fvrfrwefeirufheriufheriu" .37743 ."reqfrqfqwr"
+    .3131."dcbeyrgfewygeiberirfberiherifheriu " . 139617 .1313.
+    "fwfhebrfygfyergfywfgrybsryhfgwybchyrgfryhgfrhy"
+    .43184616."hwuihuiewehfueifhhukheui" . 971617861;
+    put 23 > 312. 123*542. 312/4324 <= 312+4328. "bwqbf". ""
+end

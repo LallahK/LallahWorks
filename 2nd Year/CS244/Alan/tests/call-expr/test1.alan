@@ -1,0 +1,9 @@
+source nm
+begin
+    call fd(); call edew();call dewdwe(dfdw,dd);
+    call ded();
+    call wdew(21>212);
+    call dedw(32<>edcew);
+    call ewd(ewc,21>dd,2+true,he+false,3>true,x<=23,5 rem 32)
+end
+

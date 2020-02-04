@@ -1,0 +1,18 @@
+source idtest4
+
+function func(integer one) to integer
+begin
+    relax
+end
+
+function proc(integer one)
+begin
+    relax
+end
+
+begin
+   integer a, b;
+   integer func;
+   a = func();
+    
+end

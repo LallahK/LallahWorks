@@ -1,0 +1,10 @@
+source this_is_a_valid_identifier
+
+function this_name_will_be_too_long_and_throw_the_identifier_too_long_error
+
+{Expected output:
+'source'
+'Identifier: 'this_is_a_valid_identifier'
+'function'
+<filename>:3:10: error: identifier too long
+}

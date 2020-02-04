@@ -1,0 +1,4 @@
+source test37
+begin integer vardef_196, vardef14, vardef91, vardef135;
+ relax 
+end

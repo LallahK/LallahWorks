@@ -1,0 +1,15 @@
+source triv 
+
+string_one "This is a \n \t \" \\ valid string"
+string_two "this is an \1 invalid string"
+
+{Expected output:
+'source'
+'Identifier: 'triv'
+Identifier: 'string_one'
+String: 'This is a \n \t \" \\ valid string"
+Identifier: 'string_two'
+<filename>:4:24: error: illegal escape code '\1' in string
+
+Note: Check that the first line passes, but the second doesn't
+}

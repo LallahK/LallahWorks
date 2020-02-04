@@ -1,0 +1,17 @@
+{ guard condition expressions }
+source invalid2
+    function func() to integer
+    begin
+        leave 1
+    end
+begin
+    integer i;
+    i := 5;
+    while func() do
+        relax
+    end
+end
+
+{
+alanc: invalid2.alan:10:11: error: incompatible types (integer and boolean) for 'while' guard
+}

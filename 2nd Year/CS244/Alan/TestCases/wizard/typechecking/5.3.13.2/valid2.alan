@@ -1,0 +1,10 @@
+{ legal array size: func returns an integer }
+source valid2
+    function func() to integer
+    begin
+        leave 0
+    end
+begin
+    integer array arr;
+    arr := array func()
+end

@@ -1,0 +1,9 @@
+source i
+begin
+    leave;
+    if 5 then relax end;
+    x := true;
+    get x;
+    while x do relax end;
+    put "" . ""
+end

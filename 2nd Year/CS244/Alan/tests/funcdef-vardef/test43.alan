@@ -1,0 +1,15 @@
+source test43
+function func_123 (  )
+ to boolean array
+begin  relax 
+end
+function func_67 (  )
+begin  relax 
+end
+function func_77 ( boolean array id185 )
+ to boolean array
+begin boolean vardef_143, vardef69;
+ relax 
+end
+begin  relax 
+end

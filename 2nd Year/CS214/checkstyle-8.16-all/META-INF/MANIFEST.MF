@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Implementation-Title: checkstyle
+Implementation-Version: 8.16
+Built-By: rivanov
+Specification-Title: checkstyle
+Implementation-Vendor-Id: com.puppycrawl.tools
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_162
+Specification-Version: 8.16
+Implementation-URL: https://checkstyle.org/
+Main-Class: com.puppycrawl.tools.checkstyle.Main
+

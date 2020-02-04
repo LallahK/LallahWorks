@@ -1,0 +1,11 @@
+{ for operator }
+source invalid1
+begin
+    integer i;
+    boolean b;
+    i := i + b;
+end
+
+{
+alanc: invalid1.alan:6:12: error: incompatible types (boolean and integer) for operator '+'
+}

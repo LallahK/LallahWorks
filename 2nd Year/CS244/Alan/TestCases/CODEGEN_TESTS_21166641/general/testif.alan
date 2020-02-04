@@ -1,0 +1,92 @@
+source testif
+begin
+    integer x;
+    
+    if 4 > 3 then
+        put "in if\n"
+    end;
+    put "left if\n";
+    if 4 < 3 then
+        put "in if\n"
+    end;
+    put "left if\n";
+
+    if 4 > 3 then
+        put "in if\n"
+    else
+        put "in else\n"
+    end;
+    put "completed if-else\n";
+    if 4 < 3 then
+        put "in if\n"
+    else
+        put "in else\n"
+    end;
+    put "completed if-else\n";
+
+    x := 2;
+    if x < 5 then
+        put "in if\n"
+    elsif x < 10 then
+        put "in first elsif\n"
+    elsif x < 15 then
+        put "in second elsif\n"
+    elsif x < 20 then
+        put "in third elsif\n"
+    else
+        put "in else\n"
+    end;
+    put "completed if-elsif-else\n";
+    x := 7;
+    if x < 5 then
+        put "in if\n"
+    elsif x < 10 then
+        put "in first elsif\n"
+    elsif x < 15 then
+        put "in second elsif\n"
+    elsif x < 20 then
+        put "in third elsif\n"
+    else
+        put "in else\n"
+    end;
+    put "completed if-elsif-else\n";
+    x := 13;
+    if x < 5 then
+        put "in if\n"
+    elsif x < 10 then
+        put "in first elsif\n"
+    elsif x < 15 then
+        put "in second elsif\n"
+    elsif x < 20 then
+        put "in third elsif\n"
+    else
+        put "in else\n"
+    end;
+    put "completed if-elsif-else\n";
+    x := 19;
+    if x < 5 then
+        put "in if\n"
+    elsif x < 10 then
+        put "in first elsif\n"
+    elsif x < 15 then
+        put "in second elsif\n"
+    elsif x < 20 then
+        put "in third elsif\n"
+    else
+        put "in else\n"
+    end;
+    put "completed if-elsif-else\n";
+    x := 21;
+    if x < 5 then
+        put "in if\n"
+    elsif x < 10 then
+        put "in first elsif\n"
+    elsif x < 15 then
+        put "in second elsif\n"
+    elsif x < 20 then
+        put "in third elsif\n"
+    else
+        put "in else\n"
+    end;
+    put "completed if-elsif-else\n"
+end

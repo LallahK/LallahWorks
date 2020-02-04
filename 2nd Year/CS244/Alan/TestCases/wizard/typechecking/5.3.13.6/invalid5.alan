@@ -1,0 +1,15 @@
+{ guard condition expressions }
+source invalid5
+begin
+    integer i;
+    i := 5;
+    if true then
+        relax
+    elsif 1 then
+        relax
+    end
+end
+
+{
+alanc: invalid5.alan:8:11: error: incompatible types (integer and boolean) for 'elsif' guard
+}

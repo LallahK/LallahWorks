@@ -1,0 +1,29 @@
+source basic
+
+function bas() to integer array
+begin
+	integer array e;
+	{integer i;
+	i := 0;
+	e := array 5;
+	while (i < 5) do
+		e[i] := i;
+		i := i + 1
+	end;}
+	leave e
+end
+
+function print(integer array e)
+begin
+	integer count;
+	count := 0;
+	while (count < 5) do
+		put e[count];
+		count := count + 1
+	end
+end
+
+begin
+	integer array b;
+	b := bas()
+end

@@ -1,0 +1,7 @@
+source test42
+function func_172 ( boolean id189, integer id173, integer array id101, boolean id124, boolean array id59 )
+begin boolean vardef_167;
+ relax 
+end
+begin  relax 
+end

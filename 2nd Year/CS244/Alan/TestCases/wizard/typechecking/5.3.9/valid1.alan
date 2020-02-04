@@ -1,0 +1,9 @@
+{ leave expression is allowed for a procedure }
+source valid1
+    function proc()
+    begin
+        leave
+    end
+begin
+    call proc()
+end

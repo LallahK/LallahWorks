@@ -1,0 +1,194 @@
+source testfuncs
+
+function a()
+begin
+    put "Call received\n"
+end
+
+function b(integer xx)
+begin
+    put xx . "\n"
+end
+
+function c(boolean xx)
+begin
+    put xx . "\n"
+end
+
+function d(integer array aa, integer xx)
+begin
+    put aa[xx] . "\n"
+end
+
+function e(boolean array aa, integer xx)
+begin
+    put aa[xx] . "\n"
+end
+
+function f(integer array aa, boolean array bb, integer xx, boolean yy)
+begin
+    put xx . "\n";
+    put yy . "\n";
+    put aa[xx] . "\n";
+    put bb[xx] . "\n"
+end
+
+function g() to integer
+begin
+    leave 100
+end
+
+function h() to boolean
+begin
+    put true
+end
+
+function i(integer xx) to integer array
+begin
+    integer array aa;
+    aa := array xx;
+    leave aa
+end
+
+function j(integer xx) to boolean array
+begin
+    boolean array bb;
+    bb := array xx;
+    leave bb
+end
+
+function k(integer array aa) to integer array
+begin
+    leave aa
+end
+
+function l(boolean array bb) to boolean array
+begin
+    leave bb
+end
+
+function m(integer xx, integer yy, integer zz) to integer
+begin
+    leave xx + yy + zz
+end
+
+function n(integer array aa, integer xx) to integer
+begin
+    integer ii, sum;
+    ii := 0;
+    sum := 0;
+    while ii < xx do
+        sum := sum + aa[ii];
+        ii := ii + 1
+    end;
+    leave sum
+end
+
+function o(boolean xx, boolean yy, boolean zz) to boolean
+begin
+    leave xx or yy or zz
+end
+
+function p(boolean array aa, integer xx) to boolean
+begin
+    integer ii;
+    boolean result;
+    ii := 0;
+    result := false;
+    while ii < xx do
+        result := result or aa[ii];
+        ii := ii + 1
+    end;
+    leave result
+end
+
+function q(integer xx, integer yy, boolean bb) to integer
+begin
+    if bb then
+        leave m(xx, yy, 0)
+    else
+        leave xx - yy
+    end
+end
+
+function r(integer nn) to integer
+begin
+    if nn = 0 then
+        leave 0
+    end;
+    leave r(nn - 1) + 1
+end
+
+function s(boolean ss) to integer
+begin
+    integer ii;
+    get ii;
+    if ss then
+        put ii . "\n"
+    end;
+    leave ii
+end
+
+function t(integer xx) to boolean array
+begin
+    boolean array aa;
+    integer ii;
+    aa := array xx;
+    ii := 0;
+    while ii < xx do
+        get aa[ii];
+        ii := ii + 1
+    end;
+    leave aa
+end
+
+begin
+    integer ii, xx;
+    integer array aa, cc;
+    boolean array bb, dd;
+    aa := array 100;
+    bb := array 100;
+    call a();
+    call b(2 + 3);
+    call c(false);
+    aa[0] := 1;
+    call d(aa, 0);
+    bb[5] := true or false;
+    call e(bb, 5);
+    aa[5] := 12 * 10;
+    {call f(aa, bb, 5, false);}
+    put g() . "\n";
+    put h() . "\n";
+    aa := i(10);
+    put aa[9] . "\n";
+    bb := j(12);
+    put bb[11] . "\n";
+    cc := k(aa);
+    put cc[9] . "\n";
+    dd := l(bb);
+    put dd[11] . "\n";
+    put m(2, 3 +5, 2 * 8) . "\n";
+    ii := 0;
+    cc := array 12;
+    while ii < 12 do
+        cc[ii] := ii;
+        ii := ii + 1
+    end;
+    bb := array 100;
+    bb[99] := true;
+    put n(cc, 12) . "\n";
+    put o(o(bb[0], bb[1], bb[2]), false or false, not true) . "\n";
+    put p(bb, 100) . "\n";
+    put q(5, 2, true) . "\n";
+    put q(5, 2, false) . "\n";
+    put r(m(1, 2 * 3, 12 - 9)) . "\n";
+    put s(bb[1]) . "\n";
+    put s(bb[99]) . "\n";
+    get xx;
+    dd := t(xx);
+    ii := 0;
+    while ii < xx do
+        put dd[ii] . "\n";
+        ii := ii + 1
+    end
+end

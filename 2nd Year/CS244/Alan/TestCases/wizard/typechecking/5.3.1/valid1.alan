@@ -1,0 +1,7 @@
+{legal array operation: assign value to array index}
+source valid1
+begin
+    boolean array bool_arr;
+    bool_arr := array 10;
+    bool_arr[0] := true
+end

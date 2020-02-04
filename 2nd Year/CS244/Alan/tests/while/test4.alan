@@ -1,0 +1,29 @@
+source ww
+function whlieif()
+begin
+    while x > y do
+        if true then
+            while 2132431 do
+                if false then
+                    while x <> y do
+                        relax
+                    end
+                end
+            end
+        end
+    end;
+
+    if 434 then
+        while true do
+          relax
+        end
+    elsif 2+4 then
+        x := 321;
+        y := 3
+    end
+end
+begin
+    while 2 rem 5 do
+        get x
+    end
+end

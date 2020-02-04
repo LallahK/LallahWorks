@@ -1,0 +1,7 @@
+source test5
+function func_175 ( integer id65, integer array id143, integer id114 )
+begin  relax 
+end
+begin integer array vardef_200, vardef23, vardef150;
+ relax 
+end

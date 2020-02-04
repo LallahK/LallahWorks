@@ -1,0 +1,17 @@
+{ parser test case by { Franco Swarts } }
+
+source type
+
+function fun (a)
+begin
+	relax
+end
+
+begin
+	relax
+end
+
+{ expected output:
+alanc: type.alan:5:15: error: expected ')', but found identifier
+}
+

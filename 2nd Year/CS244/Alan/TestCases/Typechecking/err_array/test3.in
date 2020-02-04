@@ -1,0 +1,12 @@
+source arrtest3
+
+begin
+    integer array a, d;
+    integer b, c;
+    
+    a := array 5;
+    d := array 10;
+    b := 5;
+    c := 5;
+    a[1] := d  
+end

@@ -1,0 +1,4 @@
+source n
+begin
+    g := array - 1250
+end

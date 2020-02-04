@@ -1,0 +1,488 @@
+0804a09b <main>:
+ 804a09b:	8d 4c 24 04          	lea    ecx,[esp+0x4]
+ 804a09f:	83 e4 f0             	and    esp,0xfffffff0
+ 804a0a2:	ff 71 fc             	push   DWORD PTR [ecx-0x4]
+ 804a0a5:	55                   	push   ebp
+ 804a0a6:	89 e5                	mov    ebp,esp
+ 804a0a8:	51                   	push   ecx
+ 804a0a9:	83 ec 14             	sub    esp,0x14
+ 804a0ac:	83 ec 08             	sub    esp,0x8
+ 804a0af:	68 84 a3 04 08       	push   0x804a384
+ 804a0b4:	6a 02                	push   0x2
+ 804a0b6:	e8 35 f5 ff ff       	call   80495f0 <signal@plt>
+ 804a0bb:	83 c4 10             	add    esp,0x10
+ 804a0be:	83 ec 08             	sub    esp,0x8
+ 804a0c1:	68 84 a3 04 08       	push   0x804a384
+ 804a0c6:	6a 14                	push   0x14
+ 804a0c8:	e8 23 f5 ff ff       	call   80495f0 <signal@plt>
+ 804a0cd:	83 c4 10             	add    esp,0x10
+ 804a0d0:	83 ec 08             	sub    esp,0x8
+ 804a0d3:	68 84 a3 04 08       	push   0x804a384
+ 804a0d8:	6a 01                	push   0x1
+ 804a0da:	e8 11 f5 ff ff       	call   80495f0 <signal@plt>
+ 804a0df:	83 c4 10             	add    esp,0x10
+ 804a0e2:	83 ec 08             	sub    esp,0x8
+ 804a0e5:	68 84 a3 04 08       	push   0x804a384
+ 804a0ea:	6a 0f                	push   0xf
+ 804a0ec:	e8 ff f4 ff ff       	call   80495f0 <signal@plt>
+ 804a0f1:	83 c4 10             	add    esp,0x10
+ 804a0f4:	83 ec 08             	sub    esp,0x8
+ 804a0f7:	68 84 a3 04 08       	push   0x804a384
+ 804a0fc:	6a 03                	push   0x3
+ 804a0fe:	e8 ed f4 ff ff       	call   80495f0 <signal@plt>
+ 804a103:	83 c4 10             	add    esp,0x10
+ 804a106:	e8 c1 04 00 00       	call   804a5cc <bomb_init>
+ 804a10b:	83 ec 0c             	sub    esp,0xc
+ 804a10e:	68 08 e2 08 08       	push   0x808e208
+ 804a113:	e8 b8 f6 ff ff       	call   80497d0 <puts@plt>
+ 804a118:	83 c4 10             	add    esp,0x10
+ 804a11b:	83 ec 0c             	sub    esp,0xc
+ 804a11e:	68 44 e2 08 08       	push   0x808e244
+ 804a123:	e8 d8 f3 ff ff       	call   8049500 <printf@plt>
+ 804a128:	83 c4 10             	add    esp,0x10
+ 804a12b:	c7 05 cc 12 0b 08 01 	mov    DWORD PTR ds:0x80b12cc,0x1
+ 804a132:	00 00 00 
+ 804a135:	e8 ec 05 00 00       	call   804a726 <get_phase_1_info>
+ 804a13a:	e8 53 11 00 00       	call   804b292 <phase_1>
+ 804a13f:	89 45 e8             	mov    DWORD PTR [ebp-0x18],eax
+ 804a142:	83 ec 08             	sub    esp,0x8
+ 804a145:	ff 75 e8             	push   DWORD PTR [ebp-0x18]
+ 804a148:	6a 01                	push   0x1
+ 804a14a:	e8 3c 08 00 00       	call   804a98b <defuse_phase>
+ 804a14f:	83 c4 10             	add    esp,0x10
+ 804a152:	83 ec 0c             	sub    esp,0xc
+ 804a155:	68 4e e2 08 08       	push   0x808e24e
+ 804a15a:	e8 a1 f3 ff ff       	call   8049500 <printf@plt>
+ 804a15f:	83 c4 10             	add    esp,0x10
+ 804a162:	c7 05 cc 12 0b 08 02 	mov    DWORD PTR ds:0x80b12cc,0x2
+ 804a169:	00 00 00 
+ 804a16c:	e8 cb 05 00 00       	call   804a73c <get_phase_2_info>
+ 804a171:	89 45 ec             	mov    DWORD PTR [ebp-0x14],eax
+ 804a174:	83 ec 0c             	sub    esp,0xc
+ 804a177:	ff 75 ec             	push   DWORD PTR [ebp-0x14]
+ 804a17a:	e8 bf 11 00 00       	call   804b33e <phase_2>
+ 804a17f:	83 c4 10             	add    esp,0x10
+ 804a182:	89 45 e8             	mov    DWORD PTR [ebp-0x18],eax
+ 804a185:	83 ec 08             	sub    esp,0x8
+ 804a188:	ff 75 e8             	push   DWORD PTR [ebp-0x18]
+ 804a18b:	6a 02                	push   0x2
+ 804a18d:	e8 f9 07 00 00       	call   804a98b <defuse_phase>
+ 804a192:	83 c4 10             	add    esp,0x10
+ 804a195:	83 ec 0c             	sub    esp,0xc
+ 804a198:	ff 75 ec             	push   DWORD PTR [ebp-0x14]
+ 804a19b:	e8 a0 f3 ff ff       	call   8049540 <free@plt>
+ 804a1a0:	83 c4 10             	add    esp,0x10
+ 804a1a3:	83 ec 0c             	sub    esp,0xc
+ 804a1a6:	ff 75 e8             	push   DWORD PTR [ebp-0x18]
+ 804a1a9:	e8 92 f3 ff ff       	call   8049540 <free@plt>
+ 804a1ae:	83 c4 10             	add    esp,0x10
+ 804a1b1:	83 ec 0c             	sub    esp,0xc
+ 804a1b4:	68 58 e2 08 08       	push   0x808e258
+ 804a1b9:	e8 42 f3 ff ff       	call   8049500 <printf@plt>
+ 804a1be:	83 c4 10             	add    esp,0x10
+ 804a1c1:	c7 05 cc 12 0b 08 03 	mov    DWORD PTR ds:0x80b12cc,0x3
+ 804a1c8:	00 00 00 
+ 804a1cb:	e8 81 05 00 00       	call   804a751 <get_phase_3_info>
+ 804a1d0:	89 45 f0             	mov    DWORD PTR [ebp-0x10],eax
+ 804a1d3:	83 ec 0c             	sub    esp,0xc
+ 804a1d6:	ff 75 f0             	push   DWORD PTR [ebp-0x10]
+ 804a1d9:	e8 a5 15 00 00       	call   804b783 <phase_3>
+ 804a1de:	83 c4 10             	add    esp,0x10
+ 804a1e1:	89 45 e8             	mov    DWORD PTR [ebp-0x18],eax
+ 804a1e4:	83 ec 08             	sub    esp,0x8
+ 804a1e7:	ff 75 e8             	push   DWORD PTR [ebp-0x18]
+ 804a1ea:	6a 03                	push   0x3
+ 804a1ec:	e8 9a 07 00 00       	call   804a98b <defuse_phase>
+ 804a1f1:	83 c4 10             	add    esp,0x10
+ 804a1f4:	83 ec 0c             	sub    esp,0xc
+ 804a1f7:	ff 75 e8             	push   DWORD PTR [ebp-0x18]
+ 804a1fa:	e8 41 f3 ff ff       	call   8049540 <free@plt>
+ 804a1ff:	83 c4 10             	add    esp,0x10
+ 804a202:	83 ec 0c             	sub    esp,0xc
+ 804a205:	68 62 e2 08 08       	push   0x808e262
+ 804a20a:	e8 f1 f2 ff ff       	call   8049500 <printf@plt>
+ 804a20f:	83 c4 10             	add    esp,0x10
+ 804a212:	c7 05 cc 12 0b 08 04 	mov    DWORD PTR ds:0x80b12cc,0x4
+ 804a219:	00 00 00 
+ 804a21c:	e8 6a 05 00 00       	call   804a78b <get_phase_4_info>
+ 804a221:	89 45 f4             	mov    DWORD PTR [ebp-0xc],eax
+ 804a224:	83 ec 0c             	sub    esp,0xc
+ 804a227:	ff 75 f4             	push   DWORD PTR [ebp-0xc]
+ 804a22a:	e8 aa 16 00 00       	call   804b8d9 <phase_4>
+ 804a22f:	83 c4 10             	add    esp,0x10
+ 804a232:	89 45 e8             	mov    DWORD PTR [ebp-0x18],eax
+ 804a235:	83 ec 08             	sub    esp,0x8
+ 804a238:	ff 75 e8             	push   DWORD PTR [ebp-0x18]
+ 804a23b:	6a 04                	push   0x4
+ 804a23d:	e8 49 07 00 00       	call   804a98b <defuse_phase>
+ 804a242:	83 c4 10             	add    esp,0x10
+ 804a245:	83 ec 0c             	sub    esp,0xc
+ 804a248:	ff 75 f4             	push   DWORD PTR [ebp-0xc]
+ 804a24b:	e8 f0 f2 ff ff       	call   8049540 <free@plt>
+ 804a250:	83 c4 10             	add    esp,0x10
+ 804a253:	83 ec 0c             	sub    esp,0xc
+ 804a256:	ff 75 e8             	push   DWORD PTR [ebp-0x18]
+ 804a259:	e8 e2 f2 ff ff       	call   8049540 <free@plt>
+ 804a25e:	83 c4 10             	add    esp,0x10
+ 804a261:	83 ec 0c             	sub    esp,0xc
+ 804a264:	68 6c e2 08 08       	push   0x808e26c
+ 804a269:	e8 92 f2 ff ff       	call   8049500 <printf@plt>
+ 804a26e:	83 c4 10             	add    esp,0x10
+ 804a271:	c7 05 cc 12 0b 08 05 	mov    DWORD PTR ds:0x80b12cc,0x5
+ 804a278:	00 00 00 
+ 804a27b:	e8 db 05 00 00       	call   804a85b <get_phase_5_info>
+ 804a280:	89 45 f4             	mov    DWORD PTR [ebp-0xc],eax
+ 804a283:	83 ec 0c             	sub    esp,0xc
+ 804a286:	ff 75 f4             	push   DWORD PTR [ebp-0xc]
+ 804a289:	e8 cb 1a 00 00       	call   804bd59 <phase_5>
+ 804a28e:	83 c4 10             	add    esp,0x10
+ 804a291:	89 45 e8             	mov    DWORD PTR [ebp-0x18],eax
+ 804a294:	83 ec 08             	sub    esp,0x8
+ 804a297:	ff 75 e8             	push   DWORD PTR [ebp-0x18]
+ 804a29a:	6a 05                	push   0x5
+ 804a29c:	e8 ea 06 00 00       	call   804a98b <defuse_phase>
+ 804a2a1:	83 c4 10             	add    esp,0x10
+ 804a2a4:	83 ec 0c             	sub    esp,0xc
+ 804a2a7:	ff 75 f4             	push   DWORD PTR [ebp-0xc]
+ 804a2aa:	e8 91 f2 ff ff       	call   8049540 <free@plt>
+ 804a2af:	83 c4 10             	add    esp,0x10
+ 804a2b2:	83 ec 0c             	sub    esp,0xc
+ 804a2b5:	ff 75 e8             	push   DWORD PTR [ebp-0x18]
+ 804a2b8:	e8 83 f2 ff ff       	call   8049540 <free@plt>
+ 804a2bd:	83 c4 10             	add    esp,0x10
+ 804a2c0:	83 ec 0c             	sub    esp,0xc
+ 804a2c3:	68 78 e2 08 08       	push   0x808e278
+ 804a2c8:	e8 03 f5 ff ff       	call   80497d0 <puts@plt>
+ 804a2cd:	83 c4 10             	add    esp,0x10
+ 804a2d0:	83 ec 0c             	sub    esp,0xc
+ 804a2d3:	68 a7 e2 08 08       	push   0x808e2a7
+ 804a2d8:	e8 23 f2 ff ff       	call   8049500 <printf@plt>
+ 804a2dd:	83 c4 10             	add    esp,0x10
+ 804a2e0:	e8 80 08 00 00       	call   804ab65 <read_line>
+ 804a2e5:	89 45 e8             	mov    DWORD PTR [ebp-0x18],eax
+ 804a2e8:	83 ec 08             	sub    esp,0x8
+ 804a2eb:	68 c0 e2 08 08       	push   0x808e2c0
+ 804a2f0:	ff 75 e8             	push   DWORD PTR [ebp-0x18]
+ 804a2f3:	e8 c8 f1 ff ff       	call   80494c0 <strcmp@plt>
+ 804a2f8:	83 c4 10             	add    esp,0x10
+ 804a2fb:	85 c0                	test   eax,eax
+ 804a2fd:	75 73                	jne    804a372 <main+0x2d7>
+ 804a2ff:	83 ec 0c             	sub    esp,0xc
+ 804a302:	ff 75 e8             	push   DWORD PTR [ebp-0x18]
+ 804a305:	e8 36 f2 ff ff       	call   8049540 <free@plt>
+ 804a30a:	83 c4 10             	add    esp,0x10
+ 804a30d:	e8 19 06 00 00       	call   804a92b <get_phase_6_info>
+ 804a312:	89 45 ec             	mov    DWORD PTR [ebp-0x14],eax
+ 804a315:	83 7d ec 00          	cmp    DWORD PTR [ebp-0x14],0x0
+ 804a319:	74 15                	je     804a330 <main+0x295>
+ 804a31b:	83 ec 08             	sub    esp,0x8
+ 804a31e:	ff 75 ec             	push   DWORD PTR [ebp-0x14]
+ 804a321:	68 e3 e2 08 08       	push   0x808e2e3
+ 804a326:	e8 d5 f1 ff ff       	call   8049500 <printf@plt>
+ 804a32b:	83 c4 10             	add    esp,0x10
+ 804a32e:	eb 42                	jmp    804a372 <main+0x2d7>
+ 804a330:	c7 05 cc 12 0b 08 06 	mov    DWORD PTR ds:0x80b12cc,0x6
+ 804a337:	00 00 00 
+ 804a33a:	e8 ca 20 00 00       	call   804c409 <phase_6>
+ 804a33f:	89 45 e8             	mov    DWORD PTR [ebp-0x18],eax
+ 804a342:	83 ec 0c             	sub    esp,0xc
+ 804a345:	68 e8 e2 08 08       	push   0x808e2e8
+ 804a34a:	e8 91 f4 ff ff       	call   80497e0 <system@plt>
+ 804a34f:	83 c4 10             	add    esp,0x10
+ 804a352:	83 ec 08             	sub    esp,0x8
+ 804a355:	ff 75 e8             	push   DWORD PTR [ebp-0x18]
+ 804a358:	6a 06                	push   0x6
+ 804a35a:	e8 2c 06 00 00       	call   804a98b <defuse_phase>
+ 804a35f:	83 c4 10             	add    esp,0x10
+ 804a362:	83 ec 0c             	sub    esp,0xc
+ 804a365:	68 f0 e2 08 08       	push   0x808e2f0
+ 804a36a:	e8 61 f4 ff ff       	call   80497d0 <puts@plt>
+ 804a36f:	83 c4 10             	add    esp,0x10
+ 804a372:	e8 a1 03 00 00       	call   804a718 <bomb_end>
+ 804a377:	b8 00 00 00 00       	mov    eax,0x0
+ 804a37c:	8b 4d fc             	mov    ecx,DWORD PTR [ebp-0x4]
+ 804a37f:	c9                   	leave  
+ 804a380:	8d 61 fc             	lea    esp,[ecx-0x4]
+ 804a383:	c3                   	ret    
+ 804a384:	55                   	push   ebp
+ 804a385:	89 e5                	mov    ebp,esp
+ 804a387:	83 ec 08             	sub    esp,0x8
+ 804a38a:	a1 a0 12 0b 08       	mov    eax,ds:0x80b12a0
+ 804a38f:	50                   	push   eax
+ 804a390:	6a 05                	push   0x5
+ 804a392:	6a 01                	push   0x1
+ 804a394:	68 1d e3 08 08       	push   0x808e31d
+ 804a399:	e8 72 f3 ff ff       	call   8049710 <fwrite@plt>
+ 804a39e:	83 c4 10             	add    esp,0x10
+ 804a3a1:	83 7d 08 01          	cmp    DWORD PTR [ebp+0x8],0x1
+ 804a3a5:	74 0c                	je     804a3b3 <main+0x318>
+ 804a3a7:	83 7d 08 0f          	cmp    DWORD PTR [ebp+0x8],0xf
+ 804a3ab:	74 06                	je     804a3b3 <main+0x318>
+ 804a3ad:	83 7d 08 03          	cmp    DWORD PTR [ebp+0x8],0x3
+ 804a3b1:	75 16                	jne    804a3c9 <main+0x32e>
+ 804a3b3:	a1 cc 12 0b 08       	mov    eax,ds:0x80b12cc
+ 804a3b8:	83 ec 08             	sub    esp,0x8
+ 804a3bb:	68 23 e3 08 08       	push   0x808e323
+ 804a3c0:	50                   	push   eax
+ 804a3c1:	e8 c4 06 00 00       	call   804aa8a <explode_bomb>
+ 804a3c6:	83 c4 10             	add    esp,0x10
+ 804a3c9:	90                   	nop
+ 804a3ca:	c9                   	leave  
+ 804a3cb:	c3                   	ret    
+ 804a3cc:	55                   	push   ebp
+ 804a3cd:	89 e5                	mov    ebp,esp
+ 804a3cf:	90                   	nop
+ 804a3d0:	5d                   	pop    ebp
+ 804a3d1:	c3                   	ret    
+ 804a3d2:	55                   	push   ebp
+ 804a3d3:	89 e5                	mov    ebp,esp
+ 804a3d5:	90                   	nop
+ 804a3d6:	5d                   	pop    ebp
+ 804a3d7:	c3                   	ret    
+ 804a3d8:	55                   	push   ebp
+ 804a3d9:	89 e5                	mov    ebp,esp
+ 804a3db:	90                   	nop
+ 804a3dc:	5d                   	pop    ebp
+ 804a3dd:	c3                   	ret    
+ 804a3de:	55                   	push   ebp
+ 804a3df:	89 e5                	mov    ebp,esp
+ 804a3e1:	90                   	nop
+ 804a3e2:	5d                   	pop    ebp
+ 804a3e3:	c3                   	ret    
+ 804a3e4:	55                   	push   ebp
+ 804a3e5:	89 e5                	mov    ebp,esp
+ 804a3e7:	90                   	nop
+ 804a3e8:	5d                   	pop    ebp
+ 804a3e9:	c3                   	ret    
+ 804a3ea:	55                   	push   ebp
+ 804a3eb:	89 e5                	mov    ebp,esp
+ 804a3ed:	90                   	nop
+ 804a3ee:	5d                   	pop    ebp
+ 804a3ef:	c3                   	ret    
+ 804a3f0:	55                   	push   ebp
+ 804a3f1:	89 e5                	mov    ebp,esp
+ 804a3f3:	90                   	nop
+ 804a3f4:	5d                   	pop    ebp
+ 804a3f5:	c3                   	ret    
+ 804a3f6:	55                   	push   ebp
+ 804a3f7:	89 e5                	mov    ebp,esp
+ 804a3f9:	90                   	nop
+ 804a3fa:	5d                   	pop    ebp
+ 804a3fb:	c3                   	ret    
+ 804a3fc:	55                   	push   ebp
+ 804a3fd:	89 e5                	mov    ebp,esp
+ 804a3ff:	90                   	nop
+ 804a400:	5d                   	pop    ebp
+ 804a401:	c3                   	ret    
+ 804a402:	55                   	push   ebp
+ 804a403:	89 e5                	mov    ebp,esp
+ 804a405:	90                   	nop
+ 804a406:	5d                   	pop    ebp
+ 804a407:	c3                   	ret    
+ 804a408:	55                   	push   ebp
+ 804a409:	89 e5                	mov    ebp,esp
+ 804a40b:	90                   	nop
+ 804a40c:	5d                   	pop    ebp
+ 804a40d:	c3                   	ret    
+ 804a40e:	55                   	push   ebp
+ 804a40f:	89 e5                	mov    ebp,esp
+ 804a411:	90                   	nop
+ 804a412:	5d                   	pop    ebp
+ 804a413:	c3                   	ret    
+ 804a414:	55                   	push   ebp
+ 804a415:	89 e5                	mov    ebp,esp
+ 804a417:	90                   	nop
+ 804a418:	5d                   	pop    ebp
+ 804a419:	c3                   	ret    
+ 804a41a:	55                   	push   ebp
+ 804a41b:	89 e5                	mov    ebp,esp
+ 804a41d:	90                   	nop
+ 804a41e:	5d                   	pop    ebp
+ 804a41f:	c3                   	ret    
+ 804a420:	55                   	push   ebp
+ 804a421:	89 e5                	mov    ebp,esp
+ 804a423:	90                   	nop
+ 804a424:	5d                   	pop    ebp
+ 804a425:	c3                   	ret    
+ 804a426:	55                   	push   ebp
+ 804a427:	89 e5                	mov    ebp,esp
+ 804a429:	90                   	nop
+ 804a42a:	5d                   	pop    ebp
+ 804a42b:	c3                   	ret    
+ 804a42c:	55                   	push   ebp
+ 804a42d:	89 e5                	mov    ebp,esp
+ 804a42f:	90                   	nop
+ 804a430:	5d                   	pop    ebp
+ 804a431:	c3                   	ret    
+ 804a432:	55                   	push   ebp
+ 804a433:	89 e5                	mov    ebp,esp
+ 804a435:	90                   	nop
+ 804a436:	5d                   	pop    ebp
+ 804a437:	c3                   	ret    
+ 804a438:	55                   	push   ebp
+ 804a439:	89 e5                	mov    ebp,esp
+ 804a43b:	90                   	nop
+ 804a43c:	5d                   	pop    ebp
+ 804a43d:	c3                   	ret    
+ 804a43e:	55                   	push   ebp
+ 804a43f:	89 e5                	mov    ebp,esp
+ 804a441:	90                   	nop
+ 804a442:	5d                   	pop    ebp
+ 804a443:	c3                   	ret    
+ 804a444:	55                   	push   ebp
+ 804a445:	89 e5                	mov    ebp,esp
+ 804a447:	90                   	nop
+ 804a448:	5d                   	pop    ebp
+ 804a449:	c3                   	ret    
+ 804a44a:	55                   	push   ebp
+ 804a44b:	89 e5                	mov    ebp,esp
+ 804a44d:	90                   	nop
+ 804a44e:	5d                   	pop    ebp
+ 804a44f:	c3                   	ret    
+ 804a450:	55                   	push   ebp
+ 804a451:	89 e5                	mov    ebp,esp
+ 804a453:	90                   	nop
+ 804a454:	5d                   	pop    ebp
+ 804a455:	c3                   	ret    
+ 804a456:	55                   	push   ebp
+ 804a457:	89 e5                	mov    ebp,esp
+ 804a459:	90                   	nop
+ 804a45a:	5d                   	pop    ebp
+ 804a45b:	c3                   	ret    
+ 804a45c:	55                   	push   ebp
+ 804a45d:	89 e5                	mov    ebp,esp
+ 804a45f:	90                   	nop
+ 804a460:	5d                   	pop    ebp
+ 804a461:	c3                   	ret    
+ 804a462:	55                   	push   ebp
+ 804a463:	89 e5                	mov    ebp,esp
+ 804a465:	90                   	nop
+ 804a466:	5d                   	pop    ebp
+ 804a467:	c3                   	ret    
+ 804a468:	55                   	push   ebp
+ 804a469:	89 e5                	mov    ebp,esp
+ 804a46b:	90                   	nop
+ 804a46c:	5d                   	pop    ebp
+ 804a46d:	c3                   	ret    
+ 804a46e:	55                   	push   ebp
+ 804a46f:	89 e5                	mov    ebp,esp
+ 804a471:	90                   	nop
+ 804a472:	5d                   	pop    ebp
+ 804a473:	c3                   	ret    
+ 804a474:	55                   	push   ebp
+ 804a475:	89 e5                	mov    ebp,esp
+ 804a477:	90                   	nop
+ 804a478:	5d                   	pop    ebp
+ 804a479:	c3                   	ret    
+ 804a47a:	55                   	push   ebp
+ 804a47b:	89 e5                	mov    ebp,esp
+ 804a47d:	90                   	nop
+ 804a47e:	5d                   	pop    ebp
+ 804a47f:	c3                   	ret    
+ 804a480:	55                   	push   ebp
+ 804a481:	89 e5                	mov    ebp,esp
+ 804a483:	83 ec 08             	sub    esp,0x8
+ 804a486:	83 ec 0c             	sub    esp,0xc
+ 804a489:	68 38 e3 08 08       	push   0x808e338
+ 804a48e:	e8 3d f3 ff ff       	call   80497d0 <puts@plt>
+ 804a493:	83 c4 10             	add    esp,0x10
+ 804a496:	83 ec 0c             	sub    esp,0xc
+ 804a499:	6a 02                	push   0x2
+ 804a49b:	e8 70 f3 ff ff       	call   8049810 <exit@plt>
+ 804a4a0:	55                   	push   ebp
+ 804a4a1:	89 e5                	mov    ebp,esp
+ 804a4a3:	83 ec 18             	sub    esp,0x18
+ 804a4a6:	a1 e0 12 0b 08       	mov    eax,ds:0x80b12e0
+ 804a4ab:	83 ec 0c             	sub    esp,0xc
+ 804a4ae:	50                   	push   eax
+ 804a4af:	e8 ac f3 ff ff       	call   8049860 <strlen@plt>
+ 804a4b4:	83 c4 10             	add    esp,0x10
+ 804a4b7:	83 c0 5b             	add    eax,0x5b
+ 804a4ba:	89 45 ec             	mov    DWORD PTR [ebp-0x14],eax
+ 804a4bd:	8b 45 ec             	mov    eax,DWORD PTR [ebp-0x14]
+ 804a4c0:	83 ec 0c             	sub    esp,0xc
+ 804a4c3:	50                   	push   eax
+ 804a4c4:	e8 f7 f2 ff ff       	call   80497c0 <malloc@plt>
+ 804a4c9:	83 c4 10             	add    esp,0x10
+ 804a4cc:	89 45 f0             	mov    DWORD PTR [ebp-0x10],eax
+ 804a4cf:	a1 e0 12 0b 08       	mov    eax,ds:0x80b12e0
+ 804a4d4:	83 ec 08             	sub    esp,0x8
+ 804a4d7:	ff 75 08             	push   DWORD PTR [ebp+0x8]
+ 804a4da:	68 58 e3 08 08       	push   0x808e358
+ 804a4df:	68 79 e3 08 08       	push   0x808e379
+ 804a4e4:	50                   	push   eax
+ 804a4e5:	68 84 e3 08 08       	push   0x808e384
+ 804a4ea:	ff 75 f0             	push   DWORD PTR [ebp-0x10]
+ 804a4ed:	e8 2e f5 ff ff       	call   8049a20 <sprintf@plt>
+ 804a4f2:	83 c4 20             	add    esp,0x20
+ 804a4f5:	83 ec 0c             	sub    esp,0xc
+ 804a4f8:	ff 75 f0             	push   DWORD PTR [ebp-0x10]
+ 804a4fb:	e8 61 0d 00 00       	call   804b261 <get>
+ 804a500:	83 c4 10             	add    esp,0x10
+ 804a503:	89 45 f4             	mov    DWORD PTR [ebp-0xc],eax
+ 804a506:	83 ec 0c             	sub    esp,0xc
+ 804a509:	ff 75 f0             	push   DWORD PTR [ebp-0x10]
+ 804a50c:	e8 2f f0 ff ff       	call   8049540 <free@plt>
+ 804a511:	83 c4 10             	add    esp,0x10
+ 804a514:	83 7d f4 00          	cmp    DWORD PTR [ebp-0xc],0x0
+ 804a518:	75 05                	jne    804a51f <main+0x484>
+ 804a51a:	e8 61 ff ff ff       	call   804a480 <main+0x3e5>
+ 804a51f:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+ 804a522:	8b 00                	mov    eax,DWORD PTR [eax]
+ 804a524:	c9                   	leave  
+ 804a525:	c3                   	ret    
+ 804a526:	55                   	push   ebp
+ 804a527:	89 e5                	mov    ebp,esp
+ 804a529:	83 ec 18             	sub    esp,0x18
+ 804a52c:	c7 45 f4 00 00 00 00 	mov    DWORD PTR [ebp-0xc],0x0
+ 804a533:	83 ec 0c             	sub    esp,0xc
+ 804a536:	ff 75 08             	push   DWORD PTR [ebp+0x8]
+ 804a539:	e8 22 f3 ff ff       	call   8049860 <strlen@plt>
+ 804a53e:	83 c4 10             	add    esp,0x10
+ 804a541:	3d 84 03 00 00       	cmp    eax,0x384
+ 804a546:	76 61                	jbe    804a5a9 <main+0x50e>
+ 804a548:	b8 00 00 00 00       	mov    eax,0x0
+ 804a54d:	eb 7b                	jmp    804a5ca <main+0x52f>
+ 804a54f:	e8 fc f5 ff ff       	call   8049b50 <__ctype_b_loc@plt>
+ 804a554:	8b 00                	mov    eax,DWORD PTR [eax]
+ 804a556:	0f be 55 f3          	movsx  edx,BYTE PTR [ebp-0xd]
+ 804a55a:	01 d2                	add    edx,edx
+ 804a55c:	01 d0                	add    eax,edx
+ 804a55e:	0f b7 00             	movzx  eax,WORD PTR [eax]
+ 804a561:	0f b7 c0             	movzx  eax,ax
+ 804a564:	25 00 20 00 00       	and    eax,0x2000
+ 804a569:	85 c0                	test   eax,eax
+ 804a56b:	74 02                	je     804a56f <main+0x4d4>
+ 804a56d:	eb 3a                	jmp    804a5a9 <main+0x50e>
+ 804a56f:	e8 dc f5 ff ff       	call   8049b50 <__ctype_b_loc@plt>
+ 804a574:	8b 00                	mov    eax,DWORD PTR [eax]
+ 804a576:	0f be 55 f3          	movsx  edx,BYTE PTR [ebp-0xd]
+ 804a57a:	01 d2                	add    edx,edx
+ 804a57c:	01 d0                	add    eax,edx
+ 804a57e:	0f b7 00             	movzx  eax,WORD PTR [eax]
+ 804a581:	0f b7 c0             	movzx  eax,ax
+ 804a584:	83 e0 08             	and    eax,0x8
+ 804a587:	85 c0                	test   eax,eax
+ 804a589:	74 02                	je     804a58d <main+0x4f2>
+ 804a58b:	eb 1c                	jmp    804a5a9 <main+0x50e>
+ 804a58d:	0f be 45 f3          	movsx  eax,BYTE PTR [ebp-0xd]
+ 804a591:	83 e8 2a             	sub    eax,0x2a
+ 804a594:	83 f8 35             	cmp    eax,0x35
+ 804a597:	77 09                	ja     804a5a2 <main+0x507>
+ 804a599:	8b 04 85 b8 e3 08 08 	mov    eax,DWORD PTR [eax*4+0x808e3b8]
+ 804a5a0:	ff e0                	jmp    eax
+ 804a5a2:	b8 00 00 00 00       	mov    eax,0x0
+ 804a5a7:	eb 21                	jmp    804a5ca <main+0x52f>
+ 804a5a9:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+ 804a5ac:	8d 50 01             	lea    edx,[eax+0x1]
+ 804a5af:	89 55 f4             	mov    DWORD PTR [ebp-0xc],edx
+ 804a5b2:	89 c2                	mov    edx,eax
+ 804a5b4:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+ 804a5b7:	01 d0                	add    eax,edx
+ 804a5b9:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+ 804a5bc:	88 45 f3             	mov    BYTE PTR [ebp-0xd],al
+ 804a5bf:	80 7d f3 00          	cmp    BYTE PTR [ebp-0xd],0x0
+ 804a5c3:	75 8a                	jne    804a54f <main+0x4b4>
+ 804a5c5:	b8 01 00 00 00       	mov    eax,0x1
+ 804a5ca:	c9                   	leave  
+ 804a5cb:	c3                   	ret 
