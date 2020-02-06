@@ -1,4 +1,0 @@
-source math
-begin
-	put 3 - 5
-end

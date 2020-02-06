@@ -1,8 +1,0 @@
-source testwrite
-begin
-    put 5 . "\n";
-    put true . "\n";
-    put 5 . " is neither " . true . " nor " . false . "\n";
-    put "We do not want to see \"Segmentation fault\"\\\"Aborted\"\n";
-    put "here\t\\\tthere\n"
-end

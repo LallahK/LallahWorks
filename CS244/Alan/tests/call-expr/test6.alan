@@ -1,4 +1,0 @@
-source n
-begin
-    call g( )
-end

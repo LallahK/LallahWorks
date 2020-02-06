@@ -1,7 +1,0 @@
-source error330
-begin
-    integer a;
-    boolean b;
-    
-    b := not a
-end

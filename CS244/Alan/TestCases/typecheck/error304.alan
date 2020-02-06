@@ -1,6 +1,0 @@
-source error304
-begin
-    boolean b;
-
-    b := 1
-end

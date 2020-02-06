@@ -1,4 +1,0 @@
-source test39
-begin boolean vardef_162, vardef148, vardef139;
- relax 
-end

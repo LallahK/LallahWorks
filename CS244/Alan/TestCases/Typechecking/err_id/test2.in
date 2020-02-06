@@ -1,8 +1,0 @@
-source idtest2
-
-begin
-    integer array a;
-    integer b, c;
-    
-    a := d();
-end

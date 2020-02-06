@@ -1,1 +1,0 @@
-testscanner: test112.alan:2:1: error: identifier too long

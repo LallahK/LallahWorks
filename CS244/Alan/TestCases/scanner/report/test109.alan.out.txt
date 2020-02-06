@@ -1,7 +1,0 @@
-Identifier: 'This'
-Identifier: 'should'
-Identifier: 'produce'
-Identifier: 'an'
-Identifier: 'error'
-Identifier: 'right'
-Identifier: 'now'

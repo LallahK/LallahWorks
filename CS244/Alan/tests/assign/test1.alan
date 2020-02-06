@@ -1,7 +1,0 @@
-source i
-begin
-    a[32+12] := 32;
-    sds[321312] := 21;
-    ds[-12+21*12/32 rem eded + 212 -3213] := 32;
-    ejdie[ed or cei and not 3] := 21
-end

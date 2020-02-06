@@ -1,6 +1,0 @@
-{ i is a variable }
-source valid1
-begin
-    integer i;
-    i := 1
-end

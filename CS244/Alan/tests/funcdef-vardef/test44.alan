@@ -1,8 +1,0 @@
-source test44
-function func_73 ( boolean id22, integer array id88, integer id188 )
- to integer
-begin integer vardef_148;
- relax 
-end
-begin  relax 
-end

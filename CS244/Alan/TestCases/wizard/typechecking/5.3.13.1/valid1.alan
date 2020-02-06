@@ -1,6 +1,0 @@
-{ legal array index: arr2[0] is an integer }
-source valid1
-begin
-    integer array arr, arr2;
-    arr[arr2[0]] := 42
-end

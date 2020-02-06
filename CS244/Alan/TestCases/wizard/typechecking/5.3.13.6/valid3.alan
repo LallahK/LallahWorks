@@ -1,9 +1,0 @@
-{ guard condition expressions }
-source valid3
-begin
-    integer i;
-    i := 5;
-    if true then
-        relax
-    end
-end

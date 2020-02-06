@@ -1,1 +1,0 @@
-testscanner: test114.alan:1:32: error: illegal character '$' (ASCII #36)

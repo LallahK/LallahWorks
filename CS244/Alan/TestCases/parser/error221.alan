@@ -1,6 +1,0 @@
-source test221
-begin
-    get
-end
-
-{ should return ID error, not FACTOR error ... }

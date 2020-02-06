@@ -1,8 +1,0 @@
-source nm
-begin
-    x := 3;
-    ewd[3+2] := 312;
-    cdwdwe := 312 <= 321;
-    wdwe := array 21 + 21312;
-    wenid[-2+313+21] := array -12 + 121 +122
-end

@@ -1,7 +1,0 @@
-{legal: may read into variable}
-source valid1
-begin
-    integer i;
-    get i
-end
-

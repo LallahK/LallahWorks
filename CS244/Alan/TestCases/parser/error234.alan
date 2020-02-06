@@ -1,7 +1,0 @@
-source error234
-begin
-    integer x;
-
-    relax;
-    relax
-end

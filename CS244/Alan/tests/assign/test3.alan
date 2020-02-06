@@ -1,4 +1,0 @@
-source i
-begin
-    a[1413 * 31231] := 3
-end

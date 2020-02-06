@@ -1,4 +1,0 @@
-source n
-begin
-    g[2+3 * 3] := array 12
-end

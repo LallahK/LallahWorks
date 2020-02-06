@@ -1,5 +1,0 @@
-source ex
-begin
-    leave;
-    leave ex
-end

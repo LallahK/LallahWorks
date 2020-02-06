@@ -1,6 +1,0 @@
-source error321
-begin
-    integer i;
-
-    i[10] := 99
-end

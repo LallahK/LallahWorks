@@ -1,8 +1,0 @@
-source test18
-function func_158 ( boolean id106, boolean array id198, integer id87, integer array id102, boolean array id112 )
- to integer array
-begin integer array vardef_189;
- get inputid114_113
-end
-begin  relax 
-end

@@ -1,1 +1,0 @@
-testscanner: test120.alan:1:1: error: string not closed

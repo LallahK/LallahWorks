@@ -1,4 +1,0 @@
-source e
-begin
-    sdjk[5-true + 5 + not false or not not not a(1) or not  false or true] := 1
-end

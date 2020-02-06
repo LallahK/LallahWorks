@@ -1,6 +1,0 @@
-source error231
-begin
-    integer array a;
-
-    put a[1
-end

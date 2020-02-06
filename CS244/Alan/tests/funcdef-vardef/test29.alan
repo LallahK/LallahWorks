@@ -1,7 +1,0 @@
-source test29
-function func_197 ( integer id20, boolean id159, boolean id67, boolean array id193 )
- to boolean
-begin  relax 
-end
-begin  relax 
-end

@@ -1,9 +1,0 @@
-{ guard condition expressions }
-source valid1
-begin
-    integer i;
-    i := 5;
-    while true do
-        relax
-    end
-end

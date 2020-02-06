@@ -1,9 +1,0 @@
-source idtest3
-
-begin
-    integer array a;
-    integer var;
-    integer var;
-    
-    d = b + c;
-end

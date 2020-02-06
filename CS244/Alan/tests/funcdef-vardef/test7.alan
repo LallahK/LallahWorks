@@ -1,4 +1,0 @@
-source test7
-begin integer array vardef_200, vardef106;
- relax 
-end

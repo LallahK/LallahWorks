@@ -1,7 +1,0 @@
-source errarr8
-
-begin
-    integer array a;
-    integer b, c;
-    b := a + a
-end

@@ -1,7 +1,0 @@
-source test48
-function func_81 ( integer id4, integer array id42, integer array id43, boolean array id2 )
-begin  relax 
-end
-begin integer vardef_31, vardef108;
- relax 
-end
