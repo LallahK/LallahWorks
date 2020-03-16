@@ -1,0 +1,11 @@
+source triv
+
+string_one := "✓"
+
+{Expected output:
+'source'
+Identifier: 'triv'
+Identifier: 'string_one'
+':='
+<filename>:3:16: error: non-printable character (ASCII #-30) in string
+}

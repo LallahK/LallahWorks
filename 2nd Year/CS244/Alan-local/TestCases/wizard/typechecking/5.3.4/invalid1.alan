@@ -1,0 +1,13 @@
+{ is not a procedure }
+source invalid1
+    function p() to boolean
+    begin
+        leave true
+    end
+begin
+    call p()
+end
+
+{
+alanc: invalid1.alan:8:10: error: 'p' is not a procedure
+}

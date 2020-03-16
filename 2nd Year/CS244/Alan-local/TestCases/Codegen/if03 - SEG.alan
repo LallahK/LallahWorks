@@ -1,0 +1,283 @@
+source if03
+begin
+	integer a;
+	
+	put "case 1\n";	
+	a := 1;
+	if (false) then 
+		if (false) then
+			a := 2
+		elsif (false) then
+			a := 3
+		else
+			a := 4
+		end
+	elsif (false) then
+		if (false) then
+			a := 5
+		elsif (false) then
+			a := 6
+		else
+			a := 7
+		end
+	else
+		if (false) then
+			a := 8
+		elsif (false) then
+			a := 9
+		else
+			a := 10
+		end
+	end;
+	put (a)." -> 10\n\n";
+
+    put "case 2\n";	
+	a := 1;
+	if (true) then 
+		if (false) then
+			a := 2
+		elsif (false) then
+			a := 3
+		else
+			a := 4
+		end
+	elsif (false) then
+		if (false) then
+			a := 5
+		elsif (false) then
+			a := 6
+		else
+			a := 7
+		end
+	else
+		if (false) then
+			a := 8
+		elsif (false) then
+			a := 9
+		else
+			a := 10
+		end
+	end;
+	put (a)." -> 4\n\n";
+
+
+
+	put "case 3\n";	
+	a := 1;
+	if (true) then 
+		if (false) then
+			a := 2
+		elsif (true) then
+			a := 3
+		else
+			a := 4
+		end
+	elsif (false) then
+		if (false) then
+			a := 5
+		elsif (false) then
+			a := 6
+		else
+			a := 7
+		end
+	else
+		if (false) then
+			a := 8
+		elsif (false) then
+			a := 9
+		else
+			a := 10
+		end
+	end;
+	put (a)." -> 3\n\n";
+
+
+
+	put "case 4\n";	
+	a := 1;
+	if (true) then 
+		if (true) then
+			a := 2
+		elsif (false) then
+			a := 3
+		else
+			a := 4
+		end
+	elsif (false) then
+		if (false) then
+			a := 5
+		elsif (false) then
+			a := 6
+		else
+			a := 7
+		end
+	else
+		if (false) then
+			a := 8
+		elsif (false) then
+			a := 9
+		else
+			a := 10
+		end
+	end;
+	put (a)." -> 2\n\n";
+
+
+
+	put "case 5\n";	
+	a := 1;
+	if (false) then 
+		if (false) then
+			a := 2
+		elsif (false) then
+			a := 3
+		else
+			a := 4
+		end
+	elsif (true) then
+		if (false) then
+			a := 5
+		elsif (false) then
+			a := 6
+		else
+			a := 7
+		end
+	else
+		if (false) then
+			a := 8
+		elsif (false) then
+			a := 9
+		else
+			a := 10
+		end
+	end;
+	put (a)." -> 7\n\n";
+
+
+
+
+	put "case 6\n";	
+	a := 1;
+	if (false) then 
+		if (false) then
+			a := 2
+		elsif (false) then
+			a := 3
+		else
+			a := 4
+		end
+	elsif (true) then
+		if (false) then
+			a := 5
+		elsif (true) then
+			a := 6
+		else
+			a := 7
+		end
+	else
+		if (false) then
+			a := 8
+		elsif (false) then
+			a := 9
+		else
+			a := 10
+		end
+	end;
+	put (a)." -> 6\n\n";
+
+
+
+	put "case 7\n";	
+	a := 1;
+	if (false) then 
+		if (false) then
+			a := 2
+		elsif (false) then
+			a := 3
+		else
+			a := 4
+		end
+	elsif (true) then
+		if (true) then
+			a := 5
+		elsif (false) then
+			a := 6
+		else
+			a := 7
+		end
+	else
+		if (false) then
+			a := 8
+		elsif (false) then
+			a := 9
+		else
+			a := 10
+		end
+	end;
+	put (a)." -> 5\n\n";
+
+
+
+	put "case 8\n";	
+	a := 1;
+	if (false) then 
+		if (false) then
+			a := 2
+		elsif (false) then
+			a := 3
+		else
+			a := 4
+		end
+	elsif (false) then
+		if (false) then
+			a := 5
+		elsif (false) then
+			a := 6
+		else
+			a := 7
+		end
+	else
+		if (false) then
+			a := 8
+		elsif (true) then
+			a := 9
+		else
+			a := 10
+		end
+	end;
+	put (a)." -> 9\n\n";
+
+
+
+	put "case 9\n";	
+	a := 1;
+	if (false) then 
+		if (false) then
+			a := 2
+		elsif (false) then
+			a := 3
+		else
+			a := 4
+		end
+	elsif (false) then
+		if (false) then
+			a := 5
+		elsif (false) then
+			a := 6
+		else
+			a := 7
+		end
+	else
+		if (true) then
+			a := 8
+		elsif (false) then
+			a := 9
+		else
+			a := 10
+		end
+	end;
+	put (a)." -> 8\n\n"
+
+	
+
+end

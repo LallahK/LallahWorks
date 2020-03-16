@@ -1,0 +1,11 @@
+{is not a function}
+source invalid1
+begin
+    boolean array bool_arr;
+    integer i;
+    i := bool_arr()
+end
+
+{
+alanc: invalid1.alan:6:10: error: 'bool_arr' is not a function
+}

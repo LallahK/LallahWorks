@@ -1,0 +1,12 @@
+{illegal array operation}
+source invalid1
+begin
+    boolean array bool_arr;
+    integer i, j;
+    bool_arr := array 10;
+    i := j + bool_arr
+end
+
+{
+alanc: invalid1.alan:7:12: error: '+' is an illegal array operation
+}

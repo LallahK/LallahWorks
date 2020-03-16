@@ -1,0 +1,7 @@
+source ✓
+
+{Expected output:
+<filename>:1:8: error: illegal character '✓' (ASCII #-30)
+Note that the illegal character itself may or may not display, depending on
+terminal settings (i.e. either see a tick, or just a question-mark-box)
+}

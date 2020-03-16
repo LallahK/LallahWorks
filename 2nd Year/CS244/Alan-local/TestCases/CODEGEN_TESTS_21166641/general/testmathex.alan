@@ -1,0 +1,18 @@
+source testmathex
+begin
+    put 5 + 2 . "\n";
+    put 5 - 2 . "\n";
+    put 5 * 2 . "\n";
+    put 5 / 2 . "\n";
+    put 5 rem 2 . "\n";
+    put "\n";
+    put -1 . "\n";
+    put -1312 + 312 . "\n";
+    put "\n";
+    put 5 * 2 + 6 - 4 / 2 rem 3 . "\n";
+    put -1 + 300 / 30 + 18 rem 12 . "\n";
+    put 78 - 21 + 128379 - 123211 + 1 * 123 . " and " . 412 . "\n";
+    put -1 + 12 * 21 rem 5 - 1 + 31 / 2 . "\n";
+    put 3129831 * 80213810 . " might overflow\n";
+    put 32 + 21 - 3 + 323 * 20 / 5 * 21 + 32 / 5 . "\n"
+end

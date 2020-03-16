@@ -1,0 +1,14 @@
+{Basic trivial function}
+
+source triv
+begin
+	relax
+end
+
+{ Expected output:
+'source'
+Identifier: 'triv'
+'begin'
+'relax'
+'end'
+}

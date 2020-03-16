@@ -1,0 +1,13 @@
+{ too many arguments for call to  }
+source invalid4
+    function proc()
+    begin
+        relax
+    end
+begin
+    call proc(1)
+end
+
+{
+alanc: invalid4.alan:8:15: error: too many arguments for call to 'proc'
+}

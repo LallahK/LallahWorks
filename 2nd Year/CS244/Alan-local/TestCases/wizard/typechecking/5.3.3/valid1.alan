@@ -1,0 +1,10 @@
+{f is a function}
+source invalid1
+    function f() to integer
+    begin
+        leave 1
+    end
+begin
+    integer i;
+    i := f()
+end

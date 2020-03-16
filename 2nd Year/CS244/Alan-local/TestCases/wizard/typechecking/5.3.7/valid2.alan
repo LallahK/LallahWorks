@@ -1,0 +1,9 @@
+{ correct amount of arguments for call }
+source valid2
+    function proc(integer i)
+    begin
+        relax
+    end
+begin
+    call proc(4)
+end

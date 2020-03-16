@@ -1,0 +1,17 @@
+{ guard condition expressions }
+source invalid4
+    function func() to integer
+    begin
+        leave 1
+    end
+begin
+    integer i;
+    i := 5;
+    if func() then
+        relax
+    end
+end
+
+{
+alanc: invalid4.alan:10:8: error: incompatible types (integer and boolean) for 'if' guard
+}

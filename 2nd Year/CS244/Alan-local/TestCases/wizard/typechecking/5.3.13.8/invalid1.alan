@@ -1,0 +1,10 @@
+{ unary minus }
+source invalid1
+begin
+    integer i;
+    i := -true
+end
+
+{
+alanc: invalid1.alan:5:11: error: incompatible types (boolean and integer) for unary minus
+}

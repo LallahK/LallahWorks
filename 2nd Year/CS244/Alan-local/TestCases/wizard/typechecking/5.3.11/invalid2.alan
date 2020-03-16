@@ -1,0 +1,10 @@
+{ unknown identifier: illegal before no parenthesis }
+source invalid2
+begin
+    integer i;
+    call p
+end
+
+{
+alanc: invalid2.alan:5:10: error: unknown identifier 'p'
+}

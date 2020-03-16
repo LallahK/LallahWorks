@@ -1,0 +1,10 @@
+{ multiple definition of }
+source invalid1
+begin
+    integer i, j;
+    integer j
+end
+
+{
+alanc: invalid1.alan:5:13: error: multiple definition of 'j'
+}

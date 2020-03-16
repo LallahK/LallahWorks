@@ -1,0 +1,13 @@
+{ too few arguments for call to  }
+source invalid2
+    function proc(integer i, boolean b)
+    begin
+        relax
+    end
+begin
+    call proc(1)
+end
+
+{
+alanc: invalid4.alan:8:16: error: too few arguments for call to 'proc'
+}

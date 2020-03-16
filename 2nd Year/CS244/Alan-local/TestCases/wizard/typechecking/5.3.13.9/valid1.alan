@@ -1,0 +1,6 @@
+{ for not }
+source valid1
+begin
+    boolean b;
+    b := not true
+end

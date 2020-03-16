@@ -1,0 +1,11 @@
+source triv
+{ {
+
+{Expected output:
+'source'
+Identifier: 'triv'
+<filename>:2:3: error: comment not closed
+
+NOTE: From spec: "When comments are nested, the innermost comment that is not
+	closed must be indicated as the offending comment."
+}

@@ -1,0 +1,8 @@
+source idtest1
+
+begin
+    integer array a;
+    integer b, c;
+    
+    d = b + c;
+end

@@ -1,0 +1,10 @@
+{ array index: true is not an integer }
+source invalid1
+begin
+    integer array arr;
+    arr[true] := 1
+end
+
+{
+alanc: invalid1.alan:5:9: error: incompatible types (boolean and integer) for array index of 'arr'
+}

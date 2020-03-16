@@ -1,0 +1,11 @@
+source errfunc1
+
+function arbit(integer a, integer b, boolean t)
+begin
+    leave 2
+end
+
+begin
+    integer a;
+    a := arbit(1, 1, true)
+end

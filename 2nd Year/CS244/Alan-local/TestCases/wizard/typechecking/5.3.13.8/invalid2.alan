@@ -1,0 +1,11 @@
+{ unary minus: must be illegal array operation instead of unary minus }
+source invalid1
+begin
+    integer i;
+    integer array arr;
+    i := -arr
+end
+
+{
+alanc: invalid2.alan:6:11: error: '-' is an illegal array operation
+}

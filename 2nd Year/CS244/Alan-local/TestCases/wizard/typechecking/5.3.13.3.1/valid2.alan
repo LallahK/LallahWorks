@@ -1,0 +1,7 @@
+{ integer can be assigned to integer array (indexed) }
+source valid2
+begin
+    integer i;
+    integer array arr;
+    i := arr[0]
+end

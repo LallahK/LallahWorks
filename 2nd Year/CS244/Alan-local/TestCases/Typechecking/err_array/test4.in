@@ -1,0 +1,13 @@
+source arrtest4
+
+begin
+    integer array a;
+    integer b, c;
+    boolean t;
+    
+    a := array 5;
+    b := 5;
+    c := 5;
+    t := true;
+    a[t] := c + b  
+end

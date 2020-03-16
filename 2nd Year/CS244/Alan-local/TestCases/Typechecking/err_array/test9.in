@@ -1,0 +1,6 @@
+source errarr9
+
+begin
+    integer array a;
+    get a
+end

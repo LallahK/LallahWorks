@@ -1,0 +1,13 @@
+{ guard condition expressions }
+source valid2
+    function func() to boolean
+    begin
+        leave true
+    end
+begin
+    integer i;
+    i := 5;
+    while func() do
+        relax
+    end
+end

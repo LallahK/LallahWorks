@@ -1,0 +1,7 @@
++ - 
+/ * %
+. := ( ) , ; [ ]
+= != > >= < <=
+
+{Each of the above should be a token of its respective type
+(i.e. not String, Number or Identifier}
