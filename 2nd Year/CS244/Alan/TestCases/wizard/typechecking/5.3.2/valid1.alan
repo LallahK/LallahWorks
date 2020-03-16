@@ -1,7 +1,0 @@
-{legal: may read into array index}
-source valid1
-begin
-    boolean array bool_arr;
-    get bool_arr[0]
-end
-

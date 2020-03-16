@@ -1,4 +1,0 @@
-source i
-begin
-    a[120 * not 150 or false] := 3
-end

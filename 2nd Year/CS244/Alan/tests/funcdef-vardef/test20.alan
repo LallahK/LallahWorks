@@ -1,4 +1,0 @@
-source test20
-begin boolean array vardef_191, vardef128, vardef141, vardef177;
- relax 
-end

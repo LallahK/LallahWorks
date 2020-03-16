@@ -1,4 +1,0 @@
-source cmp
-begin
-	put ((5 < 8) and (8 < 6))
-end

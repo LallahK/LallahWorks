@@ -1,6 +1,0 @@
-{ arr2[0] is an integer }
-source valid1
-begin
-    integer array arr, arr2;
-    arr := array arr2[0]
-end

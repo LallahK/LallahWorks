@@ -1,4 +1,0 @@
-source wr
-begin
-    put  "hello, world"  . ""
-end

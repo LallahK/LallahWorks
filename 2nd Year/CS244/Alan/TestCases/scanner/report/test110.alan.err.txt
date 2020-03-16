@@ -1,1 +1,0 @@
-testscanner: test110.alan:4:9: error: comment not closed

@@ -1,6 +1,0 @@
-source error239
-begin
-    integer x;
-
-    put x .
-end

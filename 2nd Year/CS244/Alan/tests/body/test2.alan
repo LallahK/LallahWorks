@@ -1,8 +1,0 @@
-source i
-begin
-    integer x;
-    boolean x;
-    integer array x;
-    boolean array x;
-    relax
-end

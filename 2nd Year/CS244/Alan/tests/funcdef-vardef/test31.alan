@@ -1,7 +1,0 @@
-source test31
-function func_83 (  )
-begin  relax 
-end
-begin integer vardef_133, vardef22, vardef161, vardef60;
- relax 
-end

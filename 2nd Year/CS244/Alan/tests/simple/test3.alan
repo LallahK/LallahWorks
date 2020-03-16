@@ -1,4 +1,0 @@
-source e
-begin
-    sdjk[5-10 * not 15] := 1
-end

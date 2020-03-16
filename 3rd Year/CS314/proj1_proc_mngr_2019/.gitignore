@@ -1,0 +1,12 @@
+# Object files
+
+*.o
+
+# Swap files
+
+*.swp
+
+# Excecutables
+
+*.exe
+*.out

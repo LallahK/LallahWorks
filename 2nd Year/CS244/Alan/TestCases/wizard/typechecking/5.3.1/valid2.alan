@@ -1,7 +1,0 @@
-{legal array operation: array assigned to array}
-source valid1
-begin
-    boolean array bool_arr, bool_arr2;
-    bool_arr := array 10;
-    bool_arr2 := bool_arr
-end

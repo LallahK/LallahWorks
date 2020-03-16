@@ -1,4 +1,0 @@
-source n
-begin
-    call arr(id(not id_2[- not 12]))
-end

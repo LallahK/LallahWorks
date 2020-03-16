@@ -1,1 +1,0 @@
-testscanner: test121.alan:1:55: error: non-printable character (ASCII #10) in string

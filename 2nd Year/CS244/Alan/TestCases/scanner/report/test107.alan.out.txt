@@ -1,4 +1,0 @@
-Identifier: 'This'
-Identifier: 'gets'
-Identifier: 'somewhat'
-Identifier: 'dicey'

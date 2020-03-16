@@ -1,4 +1,0 @@
-source test3
-begin boolean array vardef_200, vardef33;
- relax 
-end

@@ -1,6 +1,0 @@
-source error320
-begin
-    integer i;
-
-    i := array 10
-end

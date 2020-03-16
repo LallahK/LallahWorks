@@ -1,6 +1,0 @@
-source test16
-function func_49 ( integer id156, integer array id163 )
-begin  relax 
-end
-begin  relax 
-end

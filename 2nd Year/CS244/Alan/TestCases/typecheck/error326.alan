@@ -1,7 +1,0 @@
-source error326
-begin
-    integer a;
-    boolean b;
-    
-    a := -b
-end
