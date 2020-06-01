@@ -1,0 +1,92 @@
+#user_input {
+    padding: 0px 0 30px 0;
+    width: 50%;
+    color: var(--theme-col-one);
+    margin: auto;
+    border: 3px solid var(--theme-col-one);
+    border-radius: 8px;
+    background: rgba(50, 50, 50, 0.7);
+}
+
+#instructional_message {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#search_title {
+    text-align: center;
+    font-size: 1.8em;
+    padding: 10px;
+    color: var(--theme-col-two);
+}
+
+.user_input_box {
+    width: 48%;
+    padding: 10px 6px 10px 6px;
+    display: inline-block;
+}
+
+.input_label {
+    width: 25%;
+    padding: 2px;
+    display: inline-block;
+    font-size: 1.3em;
+    text-align: right;
+}
+
+.user_input_textbox {
+    padding: 4px 4px 4px 8px;
+    font-size: 1.15em;
+    width: 55%;
+    background-color: var(--theme-col-four);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--theme-col-five);
+    color: var(--theme-col-five);
+    border-radius: 5px;
+    font-family: var(--theme-fonttwo);
+}
+
+#category_input {
+
+}
+
+#city_input {
+
+}
+
+#time_input {
+    padding: 0 2px 0 2px;
+}
+
+#submit_box {
+    margin: auto;
+    width: 20%;
+    padding: 20px 0 0 0;
+}
+
+#submit_input {
+    width: 80%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 1000px) {
+    #user_input {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #search_title {font-size: 1.2em;}
+    .user_input_box {width: 95%}
+    .input_label {
+	width: 30%;
+	font-size: 1em;
+    } 
+    .user_input_textbox {
+	width: 60%;
+	font-size: 1em;
+    }
+    #submit_box {width: 60%;}
+}

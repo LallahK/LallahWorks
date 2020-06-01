@@ -1,0 +1,284 @@
+#results {
+    margin: auto;
+    width: 84%;
+}
+
+#output {
+    width: 72%;
+    margin: auto;
+    display: inline-block;
+}
+#output_panel_choice {
+    margin: auto;
+    width: 50%;
+    padding: 30px;
+}
+.panel_choice {
+    background: rgba(32, 25, 36, 0.3);
+    color: var(--theme-col-five);    
+    font-size: 1.6em;
+    padding: 3px 6px 3px 6px;
+    width: 49%;
+    border: 3px solid var(--theme-col-two);
+    border-radius: 6px;
+    font-family: var(--theme-fonttwo);
+}
+#other_res_choice {
+     background: 0;
+     border-width: 0px;
+}
+
+#top_restaurant_box {
+    width: 95%;
+    margin: auto;
+    padding: 30px 0 30px 0;
+    border: 4px solid var(--theme-col-one);
+    border-radius: 6px;
+    background: rgba(50, 50, 50, 0.7);
+}
+#top_restaurant_details {
+    width: 100%;
+    display: inline-block;
+    padding: 10px 0 40px 0;
+}
+.top_restaurant_pictures {
+    background-image: radial-gradient(var(--theme-col-five), #101010);
+    padding-top: 20px;
+    position: relative;
+    display: none;
+}
+#top_restaurant_pictures_0 {
+    display: block;
+}
+
+#top_restaurant_stars {
+    text-align: center;
+}
+
+#top_restaurant_name {
+    width: 36%;
+    margin: auto;
+    display: inline-block;
+}
+.tr_text {
+    margin: 2px;
+    font-size: 1.2em;
+    color: var(--theme-col-one);
+}
+#top_restaurant_rev {
+    color: var(--theme-col-five); 
+    font-size: 1em; 
+    padding: 7px 7px 15px 7px; 
+}
+#top_restaurant_rev_title {
+    text-align: center; 
+    font-weight: bold; 
+    color: var(--theme-col-five);
+    display: inline-block;
+}
+
+#top_restaurant_s_photo {
+    height: 200px;
+    padding: 40px;
+}
+.restaurant_photo_box {
+    width: 100%;
+    height: 160px;
+}
+.tr_photo {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 85%;
+}
+.top_restaurant_review {
+    width: 60%;
+    background-color: var(--theme-col-four);
+    border: 2px solid var(--theme-col-one);
+    border-radius: 4px;
+    padding: 7px;
+    display: inline-block;
+    margin: auto;
+}
+.restaurant_photo_grid {
+    width: 24%;
+    height: 200px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+.next_photos {
+    width: 4%;
+    height: 200px;
+    vertical-align: middle;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    transform: translate(-25%, 0);
+}
+#next_photos_button {
+    height: 180px;
+    width: 90%;
+    background-color: var(--theme-col-two);
+    color: var(--theme-col-five);
+    border: 1px solid var(--theme-col-three);
+    border-radius: 2px;
+    font-size: 1.5em;
+    font-family: var(--theme-fonttwo);
+}
+
+.restaurant_photo_caption {
+    height: 30px;
+}
+.tr_photo_caption {
+    text-align: center;
+    color: var(--theme-col-two);
+    font-size: 1em;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    padding: 5px;
+    transform: translate(-50%, 60%);
+}
+#other_restaurants_box {
+    display: none;
+    width: 95%;
+    margin: auto;
+    padding: 30px 0 0 0;
+    border: 4px solid var(--theme-col-one);
+    border-radius: 6px;
+}
+
+#search_bar {
+    display: inline-block;
+    background-color: var(--theme-col-four);
+    width: 24%;
+    padding: 18px ;
+    vertical-align: top;
+    margin: 100px 0 0 0;
+    border: 2px solid black;
+}
+#search_bar_prompt {
+    font-size: 1.5em;
+    color: var(--theme-col-five);
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.sidebar_input_box {
+    margin: auto;
+    width: 95%;
+    padding: 8px;
+    font-size: 1.2em;
+}
+
+.sidebar_input_label {
+    color: var(--theme-col-five);
+    text-align: right;
+    width: 27%;
+    display: inline-block;
+}
+
+.sidebar_input_textbox {
+    padding: 4px;
+    background-color: var(--theme-col-fourth);
+    border: 2px solid var(--theme-col-five);
+    border-radius: 4px;
+    width: 60%;
+}
+
+#sidebar_submit_box {
+    width: 40%;
+    padding: 40px;
+    margin: auto;
+}
+
+#submit_sidebar_input {
+   width: 98%;
+   font-weight: bold;
+   color: var(--theme-col-four);
+   background: var(--theme-col-five);
+   border: 3px solid var(--theme-col-five);
+   font-family: var(--theme-fonttwo);
+   font-size: 1em;
+}
+
+.other_restaurant_box {
+    width: 90%;
+    border: 2px solid var(--theme-col-five);
+    padding: 15px;
+    margin: auto;
+}
+
+.other_restaurant_image {
+    width: 25%;
+    height: 150px;
+    display: inline-block;
+}
+.other_restaurant_text {
+    display: inline-block;
+    vertical-align: top;
+}
+.other_photo {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+button:hover {
+    border: 2px solid var(--theme-col-four);
+}
+
+@media only screen and (max-width: 1000px) {
+    #output {
+        width: 100%;
+        margin: 0 0 40px 0;
+    }
+    #search_bar {
+        display: block;
+        width: 60%;
+        margin: auto;
+    }
+    #top_restaurant_name {
+        width: 100%;
+        padding: 0 0 30px 0;
+    }
+    .top_restaurant_review {
+        width: 85%;
+        display: block;
+    }
+    .restaurant_photo_grid {
+        width: 49%;
+    }
+    #output_panel_choice {
+        width: 70%;
+    }
+    .other_restaurant_image {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #results {width: 90%;}
+    #output_panel_choice {
+	width: 90%;
+    }
+    .panel_choice {
+	width: 80%;
+	display: block;
+	margin: auto;
+    }
+    .restaurant_photo_box {height: 70px;}
+    #search_bar {width: 85%}
+    #search_bar_prompt {font-size: 1.2em;}
+    .sidebar_input_label {
+    	width: 28%;
+	font-size: 0.8em;
+    }
+    .sidebar_input_textbox {
+    	width: 62%;
+	font-size: 0.8em;
+    }
+}

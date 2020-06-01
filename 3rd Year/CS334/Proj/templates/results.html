@@ -1,0 +1,145 @@
+{% extends 'boilerplate.html'%}
+
+{% block head %}
+<link rel="stylesheet" href="../static/results.css">
+{% endblock %}
+
+{% block body %}
+<div id = "results">
+    <div id = "output">
+        <div id = "output_panel_choice">
+            <button type = "button" onClick = "makeChoice(0)" class = "panel_choice" id = "top_res_choice">Top Restaurant</button>
+            <button type = "button" onClick = "makeChoice(1)" class = "panel_choice" id = "other_res_choice">Other Restaurants</button>
+        </div>
+
+        <div id = "top_restaurant_box">
+            {% if content['Resturant_name'] %}
+                <div id = "top_restaurant_details">
+                    <div id = "top_restaurant_name">
+			    <p class = "tr_text" style = "text-align: center; font-weight: bold; font-size: 1.4em;">{{ content['Resturant_name'] }}</p></br>
+                        <div id = "top_restaurant_stars">
+                            {% for i in range(content['Stars']) %}
+                                &#11088;
+                            {% endfor %}
+			</div></br>
+                        <p class = "tr_text"  style = "text-align: center">{{ content['Address'] }}</p>
+                    </div>
+                    <div class = "top_restaurant_review">
+                        {% if not content['Most Useful Review Author'] %}
+                            <p class = "tr_text" id = "top_restaurant_rev">{{ content['Most Useful Review'] }}</p>
+                            </br>
+                        {% else %}
+                            <p class = "tr_text" id = "top_restaurant_rev_title" style = "text-align: center; display: block">Most useful review</p>
+                            <p class = "tr_text" id = "top_restaurant_rev" style = "width: 45%; text-align: left; display: inline-block; font-weight: bold">{{ content['Most Useful Review Author'] }} </p>
+                            <p class = "tr_text" id = "top_restaurant_rev" style = "width: 45%; text-align: right; display: inline-block; font-weight: bold">Reviews:&emsp;{{ content['Review_Count'] }}</p>
+                            <p class = "tr_text" id = "top_restaurant_rev">{{ content['Most Useful Review'] }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            {% else %}
+                <div class = "top_restaurant_review" style = "width: 80%; margin-left: 8%;">
+                    <p class = tr_text id = "top_restaurant_rev">No restaurant found</p>
+                    </br>
+                </div>
+            {% endif %}
+            {% for i in content['Photo Urls and captions'] %}
+                {% if loop.index0 is divisibleby(4) %}
+                <div class = "top_restaurant_pictures" id = "top_restaurant_pictures_{{ loop.index0 // 4 }}">
+                {% endif %}
+
+                    <div class = "restaurant_photo_grid">
+                        {% if i %}
+                        <div class = "restaurant_photo_box">
+                            <img src = {{ i['url'] }} class = "tr_photo">
+                        </div>
+                        <div class = "restaurant_photo_caption">
+                            <p class = "tr_photo_caption">{{ i['caption'] }}</p>
+                        </div>
+                        {% endif %}
+                    </div>
+
+                {% if loop.index is divisibleby(4) %}
+                    <div class = "next_photos" id = "next_photos_{{ loop.index0 // 4}}">
+                    <button type = "button" onClick = "changePhotos({{ loop.index0 // 4}}, {{content['Photo Urls and captions']|length}})" id = "next_photos_button">&gt;</button>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+
+            {% if not content['Photo Urls and captions']|length is divisibleby(4) %}
+                    <div class = "next_photos" id = "next_photos_{{content['Photo Urls and captions']|length // 4}}">
+                    <button type = "button" onClick = "changePhotos({{content['Photo Urls and captions']|length // 4}}, {{content['Photo Urls and captions']|length}})" id = "next_photos_button">&gt;</button>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+
+        {% if content['Resturant_name'] %}
+            <div id = "other_restaurants_box">
+                {% for i in range(5) %}
+                    <div class = "other_restaurant_box">
+                        <div class = "other_restaurant_image">
+                            <img src = "{{url_for('static', filename = 'under-con.jpg')}}" class = "other_photo">
+                        </div>
+                        <div class = "other_restaurant_text">
+                            <p class = "tr_text" style = "text-align: center; font-weight: bold; color: var(--theme-col-two)">
+                            Restaurant Name:
+                            {% for i in range(2) %}
+                                &#11088;
+                            {% endfor %}
+                            </p></br>
+                            <p class = "tr_text" style = "font-size: 1em;">Restaurant Address</p></br>
+                            <p class = "tr_text" style = "font-size: 1em;">Reviewed by</p></br>
+                        </div>
+                    </div></br>
+                {% endfor %}
+            </div>
+        {% endif %}
+	</br>
+    </div>
+
+
+
+    <div id = "search_bar">
+        <div style = "border: 2px solid var(--theme-col-five)">
+            <form name = "sidebar_input" method = "POST">
+                <p id = "search_bar_prompt">Search for another restaurant:</p>
+                <div class = "sidebar_input_box">
+                    <label for = "sidebar_city_input" class = "sidebar_input_label">City: </label>
+                    <input type = "text" class = "sidebar_input_textbox" id = "sidebar_city_input" name = "city_input">
+                </div>
+
+                <div class = "sidebar_input_box">
+                    <label for = "sidebar_category_input" class = "sidebar_input_label">Category: </label>
+                    <select class = "sidebar_input_textbox" id = "sidebar_category_input" name = "category_input">
+                        <option value = "Seafood">Seafood</option>
+                    </select>
+                </div>
+
+                <div class = "sidebar_input_box">
+                    <label for = "sidebar_day_input" class = "sidebar_input_label">Day: </label>
+                    <select class = "sidebar_input_textbox" id = "sidebar_day_input" name = "day_input">
+                        <option value = "Monday">Monday</option>
+                        <option value = "Tuesday">Tuesday</option>
+                        <option value = "Wednesday">Wednesday</option>
+                        <option value = "Thursday">Thursday</option>
+                        <option value = "Friday">Friday</option>
+                        <option value = "Saturday">Saturday</option>
+                        <option value = "Sunday">Sunday</option>
+                    </select>
+                </div>
+
+                <div class = "sidebar_input_box">
+                    <label for = "sidebar_time_input" class = "sidebar_input_label">Time: </label>
+                    <input type = "time" class = "sidebar_input_textbox" id = "sidebar_time_input" name = "time_input">
+                </div>
+
+                </br>
+                <div id = "sidebar_submit_box">
+                    <input type = "submit" name = "submit_input" id = "submit_sidebar_input" class = "sidebar_input_textbox" value = "Search">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

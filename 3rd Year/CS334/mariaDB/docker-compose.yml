@@ -1,0 +1,26 @@
+version: "3.3"
+
+services:
+  mariadb: 
+    image: mariadb
+    container_name: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: college_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports: 
+      - "3306:3306"
+    volumes:
+      - ./db_setup.sql:/docker-entrypoint-initdb.d/db_setup.sql
+      - mariadb_volume:/var/lib/mysql
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+volumes:
+  mariadb_volume:

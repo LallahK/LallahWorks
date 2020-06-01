@@ -1,0 +1,37 @@
+<?xml version = "1.0" encoding = "UTF-8">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CS334 Project - Group 14</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <meta name="viewport" content="width=device=width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {% block head %}{% endblock %}
+</head>
+
+<style>
+    {% block style %}{% endblock %}
+</style>
+
+<body>
+    <div id = "title_panel">
+        <div id = "title_text" class = "title_text_box">
+            CS334-Project 2
+        </div>
+        <div id = "title_description" class = "title_text_box">
+            get a restuarant recommendation
+        </div>
+    </div>
+    <div id = "content">
+    {% block body %}{% endblock %}
+    </div>
+    <div id = "footer">
+        Summayyah Ajimudin • Abdullah Karbanee • Phillip Marais • Sarah Meinie • Keegan Norton • Anya Nutt
+    </div>
+    </br>
+</body>
+
+<script src = "{{url_for('static', filename = 'functions.js')}}"></script>
+
+</html>

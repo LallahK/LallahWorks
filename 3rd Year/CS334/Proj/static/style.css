@@ -1,0 +1,84 @@
+:root {
+    --theme-col-one: white;   /*Accent 1*/
+    --theme-col-two: #b55b22;   /*Panel complimentary color*/
+    --theme-col-three: #bcbdbd; /*Background color*/
+    --theme-col-four: #f9fbf6;  /*2nd background color*/
+    --theme-col-five: #201924;  /*Panel color*/ 
+    --theme-fontone: fontOne;
+    --theme-fonttwo: fontTwo; 
+}
+
+@font-face {
+    font-family: fontOne;
+    src: url(Dandy.ttf)
+}
+@font-face {
+    font-family: fontTwo;
+    src: url(Quicksand.otf)
+}
+
+body {
+    font-family: var(--theme-fonttwo);
+
+    background: url("/static/Butter_Chicken_2.jpeg");
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    width: 100%;
+    margin: 0;
+    
+}
+
+#content {
+    padding: 40px 0 40px 0;
+}
+
+#title_panel {
+    background: linear-gradient(to bottom, var(--theme-col-five) 20%, #101010 80%);
+    padding: 25px;
+    font-family: var(--theme-fontone);
+}
+
+.title_text_box {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#title_text {
+    font-size: 7em;
+    font-weight: bold;
+    color: var(--theme-col-two);
+    width: 60%;
+}
+
+#title_description {
+    font-size: 4em;
+    color: var(--theme-col-four);
+}
+
+#footer {
+    background: linear-gradient(to bottom, var(--theme-col-five) 0%, #101010 100%);
+    text-align: center;
+    color: var(--theme-col-four);
+    padding: 15px;
+    font-size: 2em;
+    font-family: var(--theme-fontone);
+    bottom: 10px;
+    position: fixed;
+    width: 100%;
+}
+
+@media (max-width: 600px) { 
+    #title_text {font-size:5em;}
+    #title_description {font-size: 3em; text-align: center}
+    .title_text_box {
+    	display: block; 
+	margin: auto;
+    }
+    #footer{
+	position: static;
+	font-size: 1.2em;
+	width: auto;
+    }
+}
