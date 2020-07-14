@@ -1,0 +1,19 @@
+name: "phase2_1.c"
+
+# The server provides a random 4 digit number Val (with at least 2 different integers)
+# The program continuously arranges the digits of Val in desc order, and 
+# in asc order. It subtracts these 2 numbers to get a new value for Val
+# This algorithm converges onto the number 6174
+description: |
+  Bomb static value: 
+  Server input value: N - Integer - 1000 <= N <= 9999 (Two different digits)
+  Password: 6174
+
+  Example: N = 8234 Password @ 6174
+
+static values:
+server_input:
+  gen_function: "simple_int_range"
+  gen_args: 
+    min: 1000
+    max: 9999

@@ -1,0 +1,33 @@
+name: "phase3_3.c"
+
+# The user is given 3 random integers K in an array at creation time. Then,
+# during defussion, they are given a random string N. The password is then 
+# the random string N copied along a certain pattern governed by K.
+
+# This pattern is as follows. Copy the first K[0] elements of N. Then skip
+# the next K[1]/K[2] elements. The algorithm alternates between skipping K[1]
+# and K[2] elements
+
+description: |
+  Bomb static value: K - Integer Array - 2 <= K[i] <= 5
+  Server Input: N - String - Random String array
+  Password: Jump skip copy of string N with pattern K
+
+  Example: 
+      K = [5, 2, 3]
+      N = "accrue accuse acedia acetal abater"
+      Password @ "accruaccuscediacetalater"
+
+static_values:
+  K:
+    gen_function: "array_of_length"
+    gen_args:
+      length: 3
+      min: 2
+      max: 5
+server_input:
+  N:
+    gen_function: "short_string_gen"
+    gen_args:
+      count: 6
+

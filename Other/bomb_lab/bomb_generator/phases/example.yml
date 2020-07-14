@@ -1,0 +1,26 @@
+# Name for the phase source file. If omitted, default to config filename with
+# a .c extension. The source and config files must be in the same directory.
+name: "example.c"
+# A description of what the phase does. This should include a description of all
+# hardcoded values that were written at generation-time, a description of values
+# sent by the server, as well as how to calculate the password from these.
+#
+# This may seem like a pain to do properly, but trust me: it's necessary.
+description: |
+  Bomb static value: K - Integer - 2 <= K <= 20000
+  Server input value: N - Integer - 2 <= N <= 20000
+  Password: K * N
+
+  Example: K = 2, N = 14, Password @ 28
+# Random values that must be hardcoded into the bomb
+static_values:
+  K:
+    gen_function: "simple_int_range"
+    gen_args:
+      min: 2
+      max: 20000
+server_input:
+  gen_function: "simple_int_range"
+  gen_args:
+    min: 2
+    max: 20000

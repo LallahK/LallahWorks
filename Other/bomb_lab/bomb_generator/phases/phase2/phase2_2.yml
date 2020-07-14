@@ -1,0 +1,26 @@
+name: "phase2_4.c"
+
+# The user must find a way to use the digits 1 - 9 to create an equation that
+# equals 100, without repeating any digits, using all digits, and only using 
+# the operations addition and subtraction
+
+description: |
+  Bomb static value: 
+  Server input value: 
+  Password: Equation equalling 100 using digits 1 - 9
+
+  Example:
+    Password @ 1+2+3-4+5+6+78+9 
+
+static_values:
+  K:
+    gen_function: "array_of_length"
+    gen_args:
+      length: 20
+      min: 2
+      max: 100
+server_input:
+  gen_function: "simple_int_range"
+  gen_args:
+    min: 3
+    max: 8

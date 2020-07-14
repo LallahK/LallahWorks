@@ -1,0 +1,30 @@
+name: "phase4_1.c"
+
+# The user is given a pangram when the bomb is generated (a pangram is a 
+# sentance containing all letters of the alphabet). The algorithm removes 
+# all spaces and places the letters of the alphabet in alphabetic order. 
+# 
+# The user has to input commands to manually guide a binary search algorithm 
+# to find a sequence of letters to complete a word given from the server
+# To manual commands to perform the searc are:
+#   l - Search left
+#   r - Search right
+#   c - Select character
+description: |
+  Bomb static value: K - String - Random String from pangrams.txt
+  Server input value: N - String - Target string
+  Password: Manual Binary search for letters in Target string
+
+  Example: 
+      N = "The quick onyx goblin jumps over the lazy dwarf"
+      K = "h"
+      
+      String after filter = "aabcdeeefghhiijkllmnnooopqrrsttuuvwxyyz"
+      Password @ lrllc
+
+static_values:
+  K:
+    gen_function: "pangram_generate"
+    gen_args:
+server_input:
+

@@ -1,0 +1,34 @@
+name: "phase4_2.c"
+
+# The user is given an array of 10 digits at create time. The user then has
+# to provide input to manually do an insertion sort on the given array. After 
+# the array is sorted, the user has to provide the value at a specefic index
+#
+# To swap the values at index a and b the user must input "a-b ". 'a' is the
+# first index, 'b' is the second index and the space after actually swaps the 
+# values. After the commands are given, the user must input ":x" where x is the 
+# value at index N
+
+description: |
+  Bomb static value: K - Integer Array - Random array of Integers
+  Server input value: N - Integer - Input index
+  Password: Sort K using manual commands:Sorted K[N]
+
+  Example:
+      K = [8, 2, 12, 1, 6]
+      N = 1
+      Password @ 0-6 2-4 :2
+
+static_values:
+  K:
+    gen_function: "array_of_length"
+    gen_args:
+      length: 10
+      min: 1
+      max: 100
+server_input:
+  N:
+    gen_function: "simple_int_range"
+    gen_args:
+      min: 0
+      max: 10

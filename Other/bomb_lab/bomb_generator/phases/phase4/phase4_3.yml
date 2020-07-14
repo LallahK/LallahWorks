@@ -1,0 +1,37 @@
+name: "phase4_3.c"
+
+# The user is given an array of size 16, which contains the transition probabilities
+# for a automata machine (kind of) at creation time. The server sends an array of 
+# values, which the user needs to compare to the transition array given to decide 
+# which transitions will take place.
+
+# There are 8 states, which loop around. Every odd index in the transition array 
+# corresponds to transitioning to the next state, while every even index corresponds 
+# to transitioning to the state after the next. 
+# For the input transitions, 's' means staying at the current state. 'n' menas going
+# to the next state, and 'd' means going to the state after the next
+
+description: |
+  Bomb static value: K - Integer Array - Random values between 0 and 100
+  Server input value: N - Integer Array - Random values between 0 and 100
+  Password: Transitions using transition array K with values N
+
+  Example:
+    K = [5, 62, 47, 74, 67, 34, 64, 24, 49, 98, 99, 12, 34, 12, 55, 46]
+    N = [50, 50, 50, 50]
+    Password @ nndn
+
+static_values:
+  K:
+    gen_function: "array_of_length"
+    gen_args:
+      length: 16
+      min: 0
+      max: 100
+server_input:
+  N:
+    gen_function: "array_of_length"
+    gen_args:
+      length: 12
+      min: 0
+      max: 100

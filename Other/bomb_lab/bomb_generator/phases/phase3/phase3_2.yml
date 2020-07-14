@@ -1,0 +1,27 @@
+name: "phase3_2.c"
+
+# The user is given 5 6-letter words in a string K, with spaces between the words, 
+# resulting in a lenght 27 string, at creation time. The algorithm follows the
+# fibonacci sequence. The algorithm copies letter F of string K, where F is a 
+# value in the fibonacci sequence. The algorithm copies a letter from string K
+# 15 times
+
+# If an index is greater than the string length, the index value is the fibonacci
+# value modulo the length of the string. Hence the password is the following
+# indexes
+#   1  2  3  5  8 13 21  0 21 21  8 29  3 32  1
+
+description: |
+  Bomb static value: K - String - String of 4 6-letter words
+  Password: Fibonnaci mix of string K, starting at index 1
+
+  Example: 
+      K = "accrue accuse acedia acetal abater"
+      Password @ "ccrec caaacbrec"
+
+static_values:
+  K:
+    gen_function: "short_strings_gen"
+    gen_args:
+      count: 4
+

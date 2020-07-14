@@ -1,0 +1,27 @@
+name: "phase2_6.c"
+
+# The user is given an integer K at creation. They then are given an Integer
+# N from the server. The password is simply K / N
+
+description: |
+  Bomb static value: K - Integer - 100 <= K <= 999
+  Server input value: N - Integer - 4 <= N <= 12
+  Password: K / N
+
+  Example:
+    K = 432
+    N = 16
+    Password @ 27
+
+static_values:
+  K:
+    gen_function: "simple_int_range"
+    gen_args:
+      min: 0
+      max: 999
+server_input:
+  N:
+    gen_function: "simple_int_range"
+    gen_args:
+      min: 4
+      max: 12

@@ -1,0 +1,19 @@
+name: "phase2_3.c"
+
+# Counts the number of relative prime numbers for a given number
+
+description: |
+  Bomb static value: 
+  Server input value: N - Integer - 10 <= N <= 50
+  Password: Number of relative prime numbers
+
+  Example:
+    N = 10
+    Password @ 4
+
+static_values:
+server_input:
+  gen_function: "simple_int_range"
+  gen_args:
+    min: 10
+    max: 50
