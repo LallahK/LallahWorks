@@ -1,10 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-char* function3();
+char* function3(char* string);
 int function6(char *first, char* second);
-
-char string[27] = "{{ short_strings_gen(varname = 'K', count = 4) }}";
 
 int phase_3(char *server_input, char *student_input) { 
     char *mixed;
@@ -13,7 +11,7 @@ int phase_3(char *server_input, char *student_input) {
         return 1;
     }
 
-    mixed = function3();
+    mixed = function3(server_input);
     if (function6(student_input, mixed) == 1) {
         return 1;
     }
@@ -21,7 +19,7 @@ int phase_3(char *server_input, char *student_input) {
     return 0; 
 }
 
-char* function3() {
+char* function3(char* string) {
     int i, j, k;
     char *mixed, ***cuboid;
     
@@ -46,10 +44,11 @@ char* function3() {
     for (i = 0; i < 3; i++) {
         for (j = 0; j < 3; j++) {
             for (k = 0; k < 3; k++) {
-                mixed[i * 9 + 3 * j + k] = cuboid[i][k][j];
+                mixed[9 * i + 3 * j + k] = cuboid[i][k][j];
             }
         }
     }
+    
     mixed[27] = '\0';
 
     return mixed;

@@ -23,8 +23,6 @@ int phase_2(char* server_input, char* student_input) {
         }
     }
 
-    printf("%d\n", count);
-
     if (input != count) {
         return 1;
     }

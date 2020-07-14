@@ -11,7 +11,7 @@ name: "phase3_3.c"
 description: |
   Bomb static value: K - Integer Array - 2 <= K[i] <= 5
   Server Input: N - String - Random String array
-  Password: Jump skip copy of string N with pattern K
+  Password: Skip copy of string N with pattern K
 
   Example: 
       K = [5, 2, 3]

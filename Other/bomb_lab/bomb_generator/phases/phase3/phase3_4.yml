@@ -1,0 +1,32 @@
+name: "phase3_4.c"
+
+# The user is given a random integer K at creation time. The server input N is then a 
+# random string of 5 6-letter words. The password is then the input K mixed according
+# to a jumping algorithm
+
+# The password is the string N copied as follows. The elements of the string are copied
+# from right to left or from left to right, depending on the state. The state changes if
+# the letter at index i is greater or less than the Kth letter of the alphabet.
+
+description: |
+  Bomb static value: K - Integer - 8 <= K <= 18
+  Server Input: N - String - Random String array
+  Password: Jump copy of string N with pattern K
+
+  Example: 
+      K = 12 (m)
+      N = "accrue accuse acedia acetal abater"
+      Password @ ""
+
+static_values:
+  K:
+    gen_function: "simple_int_range"
+    gen_args:
+      min: 105
+      max: 115
+server_input:
+  N:
+    gen_function: "short_string_gen"
+    gen_args:
+      count: 4
+

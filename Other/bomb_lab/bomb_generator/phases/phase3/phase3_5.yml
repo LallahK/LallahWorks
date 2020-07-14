@@ -1,0 +1,32 @@
+name: "phase3_5.c"
+
+# The user is given a random length 2 Integer Array K at creation time. The 
+# server input is a random string N. The password is then the random string
+# rotated K[0] right, followed by choosing every K[1]th letters of string
+# N, until all letters are chosen
+
+description: |
+  Bomb static value: K - Integer Array - 2 <= K[i] <= 5
+  Server Input: N - String - Random String array
+  Password: Rotation + Choice of string N using K
+
+  Example: 
+      K = [4, 3]
+      N = "accrue accuse acedia acetal abater"
+      
+      After rotation: "ateraccrue accuse acedia acetal ab"
+      Password @ "arcecsad elbtar ceciat ecuau eacaa"
+
+static_values:
+  K:
+    gen_function: "array_of_length"
+    gen_args:
+      length: 2
+      min: 2
+      max: 5
+server_input:
+  N:
+    gen_function: "short_string_gen"
+    gen_args:
+      count: 5
+

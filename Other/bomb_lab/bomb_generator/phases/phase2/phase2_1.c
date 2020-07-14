@@ -5,7 +5,7 @@
 int function4(char* input, int len);
 int function5(char* input, int len);
 
-int phase_2(char* student_input, char *server_input) {
+int phase_2(char* server_input, char* student_input) {
     int user_val, i, input_len, val, new_val;
     char* second_input, *first_input;
 

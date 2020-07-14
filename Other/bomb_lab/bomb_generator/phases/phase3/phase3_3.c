@@ -5,7 +5,7 @@ char* function21(char* input);
 int function23(char *first, char* second);
 void function26(char *input, char *skipstring, int jump, int state);
 
-int jumps[3] = {{ array_of_length(varname = 'K', length = 3, min = 2, max = 5) }};;
+int jumps[3] = {{ array_of_length(varname = 'K', length = 3, min = 2, max = 5) }};
 
 int phase_3(char *server_input, char *student_input) {
     char *mixed;
