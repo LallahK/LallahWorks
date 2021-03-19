@@ -4,7 +4,7 @@ mysqlclient==1.4.6
 mysql-connector-python==8.0.20
 django-mysql==2.2.0
 cryptography==2.9.2
-Pillow==7.1.2
+Pillow==8.1.1
 ordereddict==1.1
 pymysql==0.9.3
 django-jet==1.0.8
